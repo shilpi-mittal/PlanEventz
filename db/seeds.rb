@@ -17,3 +17,5 @@ articles_list = [
 articles_list.each do |title, text|
   Article.create( title: title, text: text )
 end
+
+User.create(firstname: 'anonymous')

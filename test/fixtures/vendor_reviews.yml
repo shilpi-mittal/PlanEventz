@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vendor_id: 
+  reviewer_id: 
+  review: MyText
+
+two:
+  vendor_id: 
+  reviewer_id: 
+  review: MyText
