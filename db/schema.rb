@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608183812) do
+ActiveRecord::Schema.define(version: 20150608214439) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -60,23 +60,17 @@ ActiveRecord::Schema.define(version: 20150608183812) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "vendor_rates", force: :cascade do |t|
-    t.integer "rating"
-    t.integer "vendor_id"
-  end
-
-  add_index "vendor_rates", ["vendor_id"], name: "index_vendor_rates_on_vendor_id"
-
-  create_table "vendor_reviews", force: :cascade do |t|
+  create_table "vendor_reviews_and_ratings", force: :cascade do |t|
     t.integer  "vendor_id"
     t.integer  "user_id"
     t.text     "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "rating"
   end
 
-  add_index "vendor_reviews", ["user_id"], name: "index_vendor_reviews_on_user_id"
-  add_index "vendor_reviews", ["vendor_id"], name: "index_vendor_reviews_on_vendor_id"
+  add_index "vendor_reviews_and_ratings", ["user_id"], name: "index_vendor_reviews_and_ratings_on_user_id"
+  add_index "vendor_reviews_and_ratings", ["vendor_id"], name: "index_vendor_reviews_and_ratings_on_vendor_id"
 
   create_table "vendor_sub_categories", force: :cascade do |t|
     t.integer  "vendor_category_id"
