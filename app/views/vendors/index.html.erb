@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+  </tr>
+
+  <% @vendor.each do |vendor| %>
+      <tr>
+        <td><%= vendor.name %></td>
+        <td><%= vendor.location %></td>
+      </tr>
+  <% end %>
+</table>

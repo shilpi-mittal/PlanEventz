@@ -18,4 +18,9 @@ articles_list.each do |title, text|
   Article.create( title: title, text: text )
 end
 
+# OverallAverage.create(overall_avg: 0.0)
+
 User.create(firstname: 'anonymous')
+
+Vendor.create(vendor_sub_category_id:1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: 'vendor_phone', description: 'vendor_des', website: 'vendor_web', arrangements: 2)
+
