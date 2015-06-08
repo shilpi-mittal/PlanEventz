@@ -25,4 +25,4 @@ User.create(firstname: 'anonymous')
 Vendor.create(vendor_sub_category_id:1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: 'vendor_phone', description: 'vendor_des', website: 'vendor_web')
 
 VendorRate.create(rating: 4, vendor_id: 1)
-VendorRate.create(rating: 2, vendor_id: 1)
+VendorRate.create(rating: 1, vendor_id: 1)

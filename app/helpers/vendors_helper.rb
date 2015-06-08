@@ -26,7 +26,7 @@ module VendorsHelper
         ratings.each do |rating|
           sum = sum+rating[dimension]
         end
-        avg = sum/ratings.size
+        avg = (sum.to_f)/(ratings.size.to_f)
         return avg
 
       else

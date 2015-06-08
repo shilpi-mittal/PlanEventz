@@ -12,7 +12,7 @@
       <tr>
         <td><%= vendor.name %></td>
         <td><%= vendor.location %></td>
-        <td>Rating : <%= rating_for_vendor VendorRate, "rating", "vendor_id", vendor.id %></td>
+        <td>Rating : <%= rating_for_vendor VendorRate, "rating", "vendor_id", vendor.id, :enable_half => true, :half_show => true %></td>
 
       </tr>
   <% end %>
