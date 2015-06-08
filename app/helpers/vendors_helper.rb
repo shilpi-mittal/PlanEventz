@@ -1,5 +1,5 @@
 module VendorsHelper
-    def rating_for_vendor(rateable_obj, dimension, foreign_key, id, options={})
+    def rating_for_vendor(rateable_obj, dimension, foreign_key, id, current_user, options={})
 
       cached_average = rateable_obj.select(dimension).where(foreign_key+"=?", id)
 
@@ -9,9 +9,7 @@ module VendorsHelper
 
       disable_after_rate = options[:disable_after_rate] || true
 
-      current_user = User.find_by("id=1")
-
-      readonly = !(current_user)
+      readonly = !(current_user && current_user.id!=1)
 
       content_tag :div, '', "data-dimension" => dimension, :class => "star", "data-rating" => avg,
                   "data-id" => id, "data-classname" => rateable_obj.class.name,

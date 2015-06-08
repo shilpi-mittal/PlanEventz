@@ -2,6 +2,8 @@
     <%= javascript_include_tag 'jquery.raty.js','letsrate.js'%>
 <% end %>
 
+@current_user = User.find_by("id=1")
+
 <table>
   <tr>
     <th>Name</th>
@@ -12,7 +14,7 @@
       <tr>
         <td><%= vendor.name %></td>
         <td><%= vendor.location %></td>
-        <td>Rating : <%= rating_for_vendor VendorRate, "rating", "vendor_id", vendor.id, :enable_half => true, :half_show => true %></td>
+        <td>Rating : <%= rating_for_vendor VendorRate, "rating", "vendor_id", vendor.id, @current_user, :enable_half => true, :half_show => true %></td>
 
       </tr>
   <% end %>
