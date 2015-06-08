@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608132426) do
+ActiveRecord::Schema.define(version: 20150608183812) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,31 @@ ActiveRecord::Schema.define(version: 20150608132426) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer  "rater_id"
+    t.integer  "rateable_id"
+    t.string   "rateable_type"
+    t.float    "stars",         null: false
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rates", ["rateable_id", "rateable_type"], name: "index_rates_on_rateable_id_and_rateable_type"
+  add_index "rates", ["rater_id"], name: "index_rates_on_rater_id"
+
+  create_table "rating_caches", force: :cascade do |t|
+    t.integer  "cacheable_id"
+    t.string   "cacheable_type"
+    t.float    "avg",            null: false
+    t.integer  "qty",            null: false
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
 
   create_table "users", force: :cascade do |t|
     t.string   "firstname"
@@ -34,6 +59,13 @@ ActiveRecord::Schema.define(version: 20150608132426) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "vendor_rates", force: :cascade do |t|
+    t.integer "rating"
+    t.integer "vendor_id"
+  end
+
+  add_index "vendor_rates", ["vendor_id"], name: "index_vendor_rates_on_vendor_id"
 
   create_table "vendor_reviews", force: :cascade do |t|
     t.integer  "vendor_id"
@@ -65,7 +97,6 @@ ActiveRecord::Schema.define(version: 20150608132426) do
     t.string   "website"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.integer  "arrangements"
   end
 
   add_index "vendors", ["vendor_sub_category_id"], name: "index_vendors_on_vendor_sub_category_id"

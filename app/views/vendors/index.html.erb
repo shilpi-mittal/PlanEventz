@@ -1,3 +1,7 @@
+<% content_for :javascript_includes do %>
+    <%= javascript_include_tag 'jquery.raty.js','letsrate.js'%>
+<% end %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -8,6 +12,8 @@
       <tr>
         <td><%= vendor.name %></td>
         <td><%= vendor.location %></td>
+        <td>Rating : <%= rating_for_vendor VendorRate, "rating", "vendor_id", vendor.id %></td>
+
       </tr>
   <% end %>
 </table>

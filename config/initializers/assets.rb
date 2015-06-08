@@ -11,3 +11,6 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( *.css )
+Rails.application.config.assets.precompile += %w( jquery-1.11.3.min.js )
+Rails.application.config.assets.precompile += %w( jquery.raty.js )
+Rails.application.config.assets.precompile += %w( letsrate.js )
