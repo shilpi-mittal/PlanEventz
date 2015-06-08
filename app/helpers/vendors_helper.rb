@@ -9,7 +9,7 @@ module VendorsHelper
 
       disable_after_rate = options[:disable_after_rate] || true
 
-      readonly = !(current_user && current_user.id!=1)
+      readonly = false
 
       content_tag :div, '', "data-dimension" => dimension, :class => "star", "data-rating" => avg,
                   "data-id" => id, "data-classname" => rateable_obj.class.name,
