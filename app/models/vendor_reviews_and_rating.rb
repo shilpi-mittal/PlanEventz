@@ -4,7 +4,7 @@ class VendorReviewsAndRating < ActiveRecord::Base
   validates :rating, presence: true
   validates :vendor_id, presence: true
   validates :user_id, presence: true
-  validates_numericality_of :rating, less_than_or_equal_to: 5
+  validates_numericality_of :rating, less_than_or_equal_to: 5, greater_than_or_equal_to: 0
 
   letsrate_rateable "rating"
   belongs_to :Vendor
