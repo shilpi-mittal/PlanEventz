@@ -1,0 +1,9 @@
+<% @vendor_reviews_and_rating.each do |vendor_review_rating| %>
+    <p>On <%= vendor_review_rating.created_at %></p>
+    <p>By : <%= get_user_name vendor_review_rating.user_id %></p>
+    <p>Review : <%= vendor_review_rating.review %></p>
+    <p>Rating : <%= rating_for_vendor VendorReviewsAndRating, "rating", vendor_review_rating.id, :enable_half => true, :half_show => true %></p>
+    <p></p>
+<% end %>
+
+<%= link_to 'Add Review And Rating', new_vendor_vendor_reviews_and_rating_path(@vendor.id) %>

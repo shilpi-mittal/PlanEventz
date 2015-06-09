@@ -1,0 +1,37 @@
+<%= form_for [:vendor, @vendor_reviews_and_rating] do |f| %>
+<h1>Add Review and Rating</h1>
+
+    <% if @vendor_reviews_and_rating.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@vendor_reviews_and_rating.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @vendor_reviews_and_rating.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+<p>
+  <%= f.label :Review %><br>
+  <%= f.text_field :review %>
+</p>
+
+<p>
+  <%= f.label :Rating %><br>
+  <%= f.select(:rating) do %>
+      <% [['0', 0], ['1', 1], ['2', 2], ['3', 3], ['4', 4],['5', 5]].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+  <% end %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+<p><%= link_to 'Back', vendor_path(@vendor, @vendor_all_reviews_and_rating) %></p>
+

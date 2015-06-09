@@ -1,11 +1,11 @@
 class VendorsController < ApplicationController
   def show
     @vendor = Vendor.find(params[:id])
+    @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", params[:id])
   end
 
   def index
     @vendor = Vendor.all
-    @user = User.find(params[:id], 1)
   end
 
   def new

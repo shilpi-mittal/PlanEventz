@@ -1,5 +1,5 @@
 module VendorsHelper
-    def rating_for_vendor(rateable_obj, dimension, foreign_key, id, current_user, options={})
+    def overall_rating_for_vendor(rateable_obj, dimension, foreign_key, id, options={})
 
       cached_average = rateable_obj.select(dimension).where(foreign_key+"=?", id)
 
@@ -9,7 +9,7 @@ module VendorsHelper
 
       disable_after_rate = options[:disable_after_rate] || true
 
-      readonly = false
+      readonly = true
 
       content_tag :div, '', "data-dimension" => dimension, :class => "star", "data-rating" => avg,
                   "data-id" => id, "data-classname" => rateable_obj.class.name,
@@ -31,6 +31,40 @@ module VendorsHelper
         return 0
       end
     end
+
+    def rating_for_vendor(rateable_obj, dimension, id, options={})
+
+      cached_average = rateable_obj.select(dimension).find(id)["rating"]
+
+      avg = cached_average ? cached_average : 0
+
+      star = options[:star] || 5
+
+      disable_after_rate = options[:disable_after_rate] || true
+
+      readonly = true
+
+      content_tag :div, '', "data-dimension" => dimension, :class => "star", "data-rating" => avg,
+                  "data-id" => id, "data-classname" => rateable_obj.class.name,
+                  "data-disable-after-rate" => disable_after_rate,
+                  "data-readonly" => readonly,
+                  "data-star-count" => star
+    end
+
+    def add_rating_for_vendor(rateable_obj, dimension, id, options={})
+
+      star = options[:star] || 5
+
+      disable_after_rate = options[:disable_after_rate] || false
+
+      content_tag :div, '', "data-dimension" => dimension, :class => "star", "data-rating" => 0,
+                  "data-id" => id, "data-classname" => rateable_obj.class.name,
+                  "data-disable-after-rate" => disable_after_rate,
+                  "data-readonly" => false,
+                  "data-star-count" => star
+
+    end
+
 
     def rating_for_user(rateable_obj, rating_user, dimension = nil, options = {})
       @object = rateable_obj
