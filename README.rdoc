@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version  2.0.0
 
 * System dependencies
 
@@ -26,3 +26,53 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Requirements:
+ruby 2.0.0
+rails - gem install rails
+rake
+RubyMine
+DevKit (for windows)
+	Download and extract
+	Cd into it and ruby dk.rb init
+	Modify Config.yml and ruby dk.rb install
+sqlite3
+gem sqlite3-ruby
+gem nokogiri
+gem 'social-share-button'
+gem 'letsrate'   //for rating
+gem 'coffee-script-source', '1.8.0'   //for windows
+
+
+Commands to start server on local:
+bundle install
+ruby bin/rake db:migrate
+ruby bin/rake db:reset
+ruby bin/rails server
+
+
+
+Basics:
+//for ruby on rails console:
+rails c
+
+// for social share
+rails generate social_share_button:install
+
+//for letsrate
+rails g devise:install
+rails g devise user
+rails g letsrate user
+
+//for db migration
+rails g migration create_table_name
+
+//to generate controller
+bin/rails generate controller article
+
+//to create model
+bin/rails generate model Article title:string text:text
+
+//to add foreign key
+add belongs_to and has_many
+rails g migration add_user_to_tester user_id:integer:index

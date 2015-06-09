@@ -22,5 +22,7 @@ User.create(firstname: 'anonymous')
 
 Vendor.create(vendor_sub_category_id:1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: 'vendor_phone', description: 'vendor_des', website: 'vendor_web')
 
-VendorReviewsAndRating.create(rating: 4, vendor_id: 1, user_id: 1)
-VendorReviewsAndRating.create(rating: 1, vendor_id: 1, user_id: 1)
+VendorReviewsAndRating.create(review:"Review 1", rating: 4, vendor_id: 1, user_id: 1)
+VendorReviewsAndRating.create(review:"Review 1", rating: 1, vendor_id: 1, user_id: 1)
+
+PageHit.create(url:"http://localhost:3000/vendors/1", count:0)

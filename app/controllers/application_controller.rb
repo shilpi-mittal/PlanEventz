@@ -2,4 +2,17 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  before_filter :count_hits
+  def count_hits
+    # This tries to find a existing PageHit by the given url. If it does
+    # not find one, it creates one.
+    @hit = PageHit.find_or_create_by(url: request.original_url)
+
+    # Issues an UPDATE page_hits WHERE id = 123 SET count = count + 1
+    # on the underlying database layer. This atomically increments, so
+    # you do not run into race conditions.
+    PageHit.increment_counter(:count, @hit.id)
+  end
+
 end
