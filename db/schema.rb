@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609203934) do
+ActiveRecord::Schema.define(version: 20150610190432) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(version: 20150609203934) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "vendor_photos", force: :cascade do |t|
+    t.binary   "photo"
+    t.text     "description"
+    t.string   "tag"
+    t.string   "string"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "vendor_id"
+  end
+
+  add_index "vendor_photos", ["vendor_id"], name: "index_vendor_photos_on_vendor_id"
 
   create_table "vendor_reviews_and_ratings", force: :cascade do |t|
     t.integer  "vendor_id"

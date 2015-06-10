@@ -7,6 +7,7 @@ class VendorsController < ApplicationController
 
   def index
     @vendor = Vendor.all
+    @vendor_photo = VendorPhoto.all
     @page_hit = PageHit.find_by_url(request.original_url)
   end
 

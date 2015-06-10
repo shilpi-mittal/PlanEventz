@@ -26,3 +26,15 @@ VendorReviewsAndRating.create(review:"Review 1", rating: 4, vendor_id: 1, user_i
 VendorReviewsAndRating.create(review:"Review 1", rating: 1, vendor_id: 1, user_id: 1)
 
 PageHit.create(url:"http://localhost:3000/vendors/1", count:0)
+
+begin
+  fin = File.open "app/assets/images/partyTable.jpg" , "rb"
+  img = fin.read
+rescue SystemCallError => e
+  puts e
+ensure
+  fin.close if fin
+end
+
+blob = SQLite3::Blob.new img
+VendorPhoto.create(vendor_id:1, photo: blob, description: "abc")

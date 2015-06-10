@@ -3,17 +3,49 @@
 <% end %>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Location</th>
-  </tr>
 
   <% @vendor.each do |vendor| %>
       <tr>
-        <td><%= vendor.name %></td>
-        <td><%= vendor.location %></td>
-        <td>Rating : <%= overall_rating_for_vendor VendorReviewsAndRating, "rating", "vendor_id", vendor.id, :enable_half => true, :half_show => true %></td>
-        <td><%= link_to 'View Vendor', vendor_path(vendor) %></td>
+        <%
+           pic = @vendor_photo.find_by_vendor_id(vendor.id)["photo"].to_s
+        %>
+        <td><img src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" width="400" height="400"></td>
+        <td>
+            <table>
+                <tr>
+                  <td>Name</td>
+                  <td> : <%= vendor.name %></td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td> : <%= vendor.location %></td>
+                </tr>
+                <tr>
+                  <td>Address</td>
+                  <td> : <%= vendor.address %></td>
+                </tr>
+                <tr>
+                  <td>Phone</td>
+                  <td> : <%= vendor.phone %></td>
+                </tr>
+                <tr>
+                  <td>website/email</td>
+                  <td> : <%= vendor.website %></td>
+                </tr>
+                <tr>
+                  <td>With Us since</td>
+                  <td> : <%= vendor.created_at.localtime.strftime('%v') %></td>
+                </tr>
+                <tr>
+                  <td>Rating</td>
+                  <td> <%= overall_rating_for_vendor VendorReviewsAndRating, "rating", "vendor_id", vendor.id, :enable_half => true, :half_show => true %></td>
+                </tr>
+                <tr>
+                  <td><%= link_to 'View Vendor', vendor_path(vendor) %></td>
+                </tr>
+          </table>
+        </td>
+
       </tr>
   <% end %>
 </table>
