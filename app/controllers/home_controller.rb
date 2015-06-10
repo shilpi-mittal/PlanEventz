@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
     @url = request.original_url
-    # @url = "www.udacity.com"
+    @user = User.find(1)
   end
 end
