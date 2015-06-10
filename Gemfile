@@ -37,6 +37,8 @@ gem 'letsrate'
 
 gem 'coffee-script-source', '1.8.0'
 
+gem 'social-buttons', git: 'git://github.com/iffyuva/social-buttons.git', branch: 'master'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

@@ -39,7 +39,7 @@ DevKit (for windows)
 sqlite3
 gem sqlite3-ruby
 gem nokogiri
-gem 'social-share-button'
+
 gem 'letsrate'   //for rating
 gem 'coffee-script-source', '1.8.0'   //for windows
 

@@ -1,3 +1,11 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.social-share-list {
+  li {
+    &.twt {margin-right: -35px;margin-bottom: -5px;}
+    &.gp {margin-right: -33px;margin-bottom: -5px;}
+    &.fb { position: absolute;}
+  }
+}

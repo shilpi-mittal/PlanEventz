@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/iffyuva/social-buttons.git
+  revision: 97843941393aeeabdbe0acb41494d5b04295dc23
+  branch: master
+  specs:
+    social-buttons (0.3.9)
+      rails (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -155,6 +163,7 @@ DEPENDENCIES
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  social-buttons!
   sqlite3-ruby
   turbolinks
   tzinfo-data
