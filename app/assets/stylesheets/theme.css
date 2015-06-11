@@ -59,6 +59,7 @@ img {
 .section-inner.thin { width: 700px; }
 
 .bg-dark { background-color: #1d1d1d; }
+.bg-green { background-color: #99FF00; }
 .bg-graphite { background-color: #262626; }
 .bg-grey { background-color: #f1f1f1; }
 
@@ -81,3 +82,29 @@ img {
 .cover.shade-medium { background: rgba(0,0,0,0.5); }
 .cover.shade-dark { background: rgba(0,0,0,0.75); }
 
+.page-title {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.vertical-line {
+    border-left: medium solid #99ff00;
+    box-shadow: 2px 0px 2px #000
+}
+
+.horizontal-box {
+    margin-right:20px; /* Set to 0 if you don't want shadow at the right side */
+    margin-left:20px; /* Set to 20px if you want shadow at the left side */
+    margin-top:20px; /* Set to 20px if you want shadow at the top side */
+    margin-bottom:20px; /* Set to 20px if you want shadow at the bottom side */
+    box-shadow: 20px 20px 20px black;
+    height:100px;
+    width:100px;
+}
+
+.vendor-details {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5em;
+}

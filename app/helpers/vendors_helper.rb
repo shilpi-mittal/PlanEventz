@@ -11,7 +11,7 @@ module VendorsHelper
 
       readonly = true
 
-      content_tag :div, '', "data-dimension" => dimension, :class => "star", "data-rating" => avg,
+      content_tag :td, '', "data-dimension" => dimension, :class => "star", "data-rating" => avg,
                   "data-id" => id, "data-classname" => rateable_obj.class.name,
                   "data-disable-after-rate" => disable_after_rate,
                   "data-readonly" => readonly,

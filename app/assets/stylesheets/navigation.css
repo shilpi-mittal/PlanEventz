@@ -9,7 +9,7 @@
 .main-menu > li { float: left; }
 
 .main-menu > li:before {
-    content: "/";
+    content: "|";
     display: block;
     position: absolute;
     right: 0;
@@ -17,7 +17,7 @@
     margin-top: -9px;
     margin-right: -3px;
     font-size: 16px;
-    color: #444;
+    color: #555;
     font-weight: 300;
     z-index: 1000;
 }
@@ -56,7 +56,7 @@
 
 .main-menu li:hover > a {
     cursor: pointer;
-    color: #fff;
+    color: #000;
 }
 
 .main-menu > .has-children:hover > a::after,
@@ -185,12 +185,12 @@
 }
 
 .navigation li a {
-    background: #333;
+    background: #99FF00;
     border-radius: 3px;
-    color: #fff;
+    color: #404040;
     cursor: pointer;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 10px;
 }
 
 body.single .content { width: 100%; float: none; }
@@ -211,7 +211,10 @@ body.single .content { width: 100%; float: none; }
 
 .nav-toggle .bar:first-child { margin-top: 0; }
 
-.nav-toggle:hover { cursor: pointer; }
+.nav-toggle:hover {
+    cursor: pointer;
+    display: inline-block;
+}
 
 .nav-toggle.active .bar { background: #fff; }
 

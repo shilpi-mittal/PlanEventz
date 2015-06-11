@@ -15,7 +15,10 @@
 <body>
 
 <%= yield :javascript_includes %>
-<%= yield %>
 
+<%= render 'home/theme' %>
+<%= render 'home/navigation' %>
+
+<%= yield %>
 </body>
 </html>

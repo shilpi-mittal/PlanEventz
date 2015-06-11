@@ -58,7 +58,7 @@
 					}).appendTo(self);
 
 					if (self.opt.space) {
-						$this.append((i < self.opt.number) ? '&#160;' : '');
+						$this.append((i < self.opt.number) ? '&#160;&#160;&#160;' : '');
 					}
 				}
 
@@ -76,7 +76,7 @@
 
 				methods.setTarget.call(self, self.opt.score, self.opt.targetKeep);
 
-				var space	= self.opt.space ? 4 : 0,
+				var space	= self.opt.space ? 10 : 0,
 					width	= self.opt.width || (self.opt.number * self.opt.size + self.opt.number * space);
 
 				if (self.opt.cancel) {
@@ -430,8 +430,8 @@
 	$.fn.raty.defaults = {
 		cancel			: false,
 		cancelHint		: 'cancel this rating!',
-		cancelOff		: 'cancel-off.png',
-		cancelOn		: 'cancel-on.png',
+		cancelOff		: 'stars/cancel-off.png',
+		cancelOn		: 'stars/cancel-on.png',
 		cancelPlace		: 'left',
 		click			: undefined,
 		half			: false,
@@ -448,7 +448,7 @@
 		score			: undefined,
 		scoreName		: 'score',
 		single			: false,
-		size			: 16,
+		size			: 25,
 		space			: true,
 		starHalf		: 'stars/star-half.png',
 		starOff			: 'stars/star-off.png',
