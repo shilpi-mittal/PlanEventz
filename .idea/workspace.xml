@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22562c4a-12af-41f3-8ded-0e19c4ed92a2" name="Default" comment="adding model for vendor_photo, displaying vendor_photo from database and modified the vedor page view">
-      <change type="MOVED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\app\assets\images\cancel-off.png" afterPath="$PROJECT_DIR$/app/assets/images/stars/cancel-off.png" />
-      <change type="MOVED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\app\assets\images\cancel-on.png" afterPath="$PROJECT_DIR$/app/assets/images/stars/cancel-on.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/stars/star-half.png" afterPath="$PROJECT_DIR$/app/assets/images/stars/star-half.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/stars/star-off.png" afterPath="$PROJECT_DIR$/app/assets/images/stars/star-off.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/stars/star-on.png" afterPath="$PROJECT_DIR$/app/assets/images/stars/star-on.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_navigation.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show.html.erb" afterPath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendors/index.html.erb" afterPath="$PROJECT_DIR$/app/views/vendors/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.raty.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.raty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/navigation.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/navigation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendors/show.html.erb" afterPath="$PROJECT_DIR$/app/views/vendors/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/theme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/vendors_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/vendors_helper.rb" />
+    <list default="true" id="22562c4a-12af-41f3-8ded-0e19c4ed92a2" name="Default" comment="applying theme to vendor page">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="planEventz.iws" />
@@ -47,6 +34,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,16 +81,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tag_helper.rb" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionview-4.2.1/lib/action_view/helpers/tag_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="142" column="30" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -145,10 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_show.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17566016">
+            <state vertical-scroll-proportion="-5.8846154">
               <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
               <folding />
             </state>
@@ -205,7 +192,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20150610190050_create_vendor_photos.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/controllers/vendors_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_theme.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_navigation.html.erb" />
@@ -217,6 +203,7 @@
         <option value="$PROJECT_DIR$/app/views/vendors/show.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/vendors_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
       </list>
     </option>
   </component>
@@ -933,7 +920,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433967369007</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="applying theme to vendor page">
+      <created>1433981527302</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1433981527302</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1010,7 +1003,8 @@
     <MESSAGE value="fixing bug - stars not being displayed" />
     <MESSAGE value="modifying social sharing buttons (wip)" />
     <MESSAGE value="adding model for vendor_photo, displaying vendor_photo from database and modified the vedor page view" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding model for vendor_photo, displaying vendor_photo from database and modified the vedor page view" />
+    <MESSAGE value="applying theme to vendor page" />
+    <option name="LAST_COMMIT_MESSAGE" value="applying theme to vendor page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1234,14 +1228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
@@ -1419,8 +1405,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17566016">
+        <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
