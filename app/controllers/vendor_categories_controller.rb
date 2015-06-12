@@ -1,13 +1,12 @@
-class VendorsController < ApplicationController
+class VendorCategoriesController < ApplicationController
   def show
-    @vendor = Vendor.find(params[:id])
-    @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", params[:id])
+    @vendor_category = VendorCategory.find(params[:id])["category"]
+    @vendor = Vendor.where("category_id=?", params[:id])
+    @vendor_photo = VendorPhoto.all
+    @page_hit = PageHit.find_by_url(request.original_url)
   end
 
   def index
-    @vendor = Vendor.all
-    @vendor_photo = VendorPhoto.all
-    @page_hit = PageHit.find_by_url(request.original_url)
   end
 
   def new

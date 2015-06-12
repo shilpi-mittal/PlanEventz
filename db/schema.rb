@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150610190432) do
+ActiveRecord::Schema.define(version: 20150612194624) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -92,13 +92,10 @@ ActiveRecord::Schema.define(version: 20150610190432) do
   add_index "vendor_reviews_and_ratings", ["vendor_id"], name: "index_vendor_reviews_and_ratings_on_vendor_id"
 
   create_table "vendor_sub_categories", force: :cascade do |t|
-    t.integer  "vendor_category_id"
     t.string   "sub_category"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
-
-  add_index "vendor_sub_categories", ["vendor_category_id"], name: "index_vendor_sub_categories_on_vendor_category_id"
 
   create_table "vendors", force: :cascade do |t|
     t.integer  "vendor_sub_category_id"
@@ -110,8 +107,11 @@ ActiveRecord::Schema.define(version: 20150610190432) do
     t.string   "website"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "events_handled"
+    t.integer  "category_id"
   end
 
+  add_index "vendors", ["category_id"], name: "index_vendors_on_category_id"
   add_index "vendors", ["vendor_sub_category_id"], name: "index_vendors_on_vendor_sub_category_id"
 
 end

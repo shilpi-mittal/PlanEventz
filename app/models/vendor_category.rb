@@ -1,3 +1,3 @@
 class VendorCategory < ActiveRecord::Base
-  has_many :VendorSubCategory, dependent: :destroy
+  has_many :Vendor
 end

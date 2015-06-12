@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   post '/rate' => 'rater#create', :as => 'rate'
+
   resources :articles
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,6 +14,14 @@ Rails.application.routes.draw do
 
   resources :vendors do
     resources :vendor_reviews_and_ratings
+  end
+
+  resources :vendor_categories do
+    resources :vendor_sub_categories
+  end
+
+  resources :vendor_sub_categories do
+    resources :vendors
   end
 
   # Example of regular route:
