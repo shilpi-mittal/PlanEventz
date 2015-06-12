@@ -4,9 +4,7 @@
 
 <h1><%= @vendor.name %></h1>
 <p> <%= @vendor.description %></p>
-<p> Number of Hits : <%= @page_hit.count %></p>
-<hr>
 
-<%= render 'vendor_reviews_and_ratings/show' %>
+<%= render 'vendor_reviews_and_ratings/show_review', :vendor_id => @vendor.id %>
 
 <p><%= link_to 'Back', vendors_path %></p>

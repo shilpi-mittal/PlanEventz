@@ -5,7 +5,10 @@
     <%= javascript_include_tag 'jquery.raty.js','letsrate.js'%>
 <% end %>
 
+<hr style="width: 80%">
+
 <table style="margin-left: 350px">
+        <% rowId=1; %>
 
   <% @vendor.each do |vendor| %>
       <tr>
@@ -15,7 +18,11 @@
               <% pic = @vendor_photo.find_by_vendor_id(vendor.id)["photo"].to_s %>
               <img style="padding-bottom: 10px" src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" width="400" height="400">
             </tr>
-            <tr><p style="text-align: center; vertical-align: middle" class="vendor-details"><%= vendor.name %></p></tr>
+            <tr>
+              <a href="<%= vendor_path(vendor)%>" style="text-align: center; vertical-align: middle" class="vendor-details">
+                <p><%= vendor.name %></p>
+              </a>
+            </tr>
             <tr>
               <td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
               <%= overall_rating_for_vendor VendorReviewsAndRating, "rating", "vendor_id", vendor.id, :enable_half => true, :half_show => true %>
@@ -50,16 +57,31 @@
                   <td class="vendor-details"> : <%= vendor.created_at.localtime.strftime('%v') %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details" style="color: #008CBA"><%= link_to 'Reviews', vendor_path(vendor) %></td>
-                  <td class="vendor-details" style="color: #008CBA">&#160;&#160;<%= link_to 'Gallery', vendor_path(vendor) %></td>
+                  <td><a href="#" onclick="showDiv('<%= "showReview"+rowId.to_s %>');"> Show Review </a></td>
+                  <td><a href="#" onclick="showDiv('gallery($index)');"> Gallery </a></td>
                 </tr>
           </table>
         </td>
         <td></td>
       </tr>
-      <hr style="width: 80%">
+
+      <tr>
+        <td colspan="9">
+          <div id=<%= "showReview"+rowId.to_s %>  style="display:none;" class="vertical-line" >
+            <img onclick="hideDiv('<%= "showReview"+rowId.to_s %>');" align="right" src="../../assets/stars/cancel-on.png" padding="10px" />
+            <%= render 'vendor_reviews_and_ratings/show_review', :vendor_id => vendor.id %>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="9">
+          <hr size="1" width="100%" />
+        </td>
+      </tr>
+
+      <% rowId=rowId+1%>
   <% end %>
 </table>
-<hr style="width: 80%">
 
 <p> Number of Hits : <%= @page_hit.count %></p>
