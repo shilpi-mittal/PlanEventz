@@ -55,8 +55,8 @@
       <file leaf-file-name="_navigation.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_navigation.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16073479">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.60505164">
+              <caret line="97" column="177" selection-start-line="97" selection-start-column="177" selection-end-line="97" selection-end-column="177" />
               <folding />
             </state>
           </provider>
@@ -1161,7 +1161,13 @@
       <option name="project" value="LOCAL" />
       <updated>1434188332790</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="correcting home url in navigation widget partial view">
+      <created>1434188429970</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1434188429970</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1245,7 +1251,8 @@
     <MESSAGE value="adding images to gallery and refactoring code" />
     <MESSAGE value="adding all categories and sub categories to seed and correcting uels in navigation partial view" />
     <MESSAGE value="displaying vendor categories and sub-categories and linking them to vendor pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="displaying vendor categories and sub-categories and linking them to vendor pages" />
+    <MESSAGE value="correcting home url in navigation widget partial view" />
+    <option name="LAST_COMMIT_MESSAGE" value="correcting home url in navigation widget partial view" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1650,8 +1657,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_navigation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16073479">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.60505164">
+          <caret line="97" column="177" selection-start-line="97" selection-start-column="177" selection-end-line="97" selection-end-column="177" />
           <folding />
         </state>
       </provider>
