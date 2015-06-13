@@ -12,11 +12,7 @@
         <td style="padding: 20px;">
           <table>
             <tr>
-              <% current_vendor_pic = @vendor_photo.find_by_vendor_id(vendor.id) %>
-              <% if current_vendor_pic != nil %>
-                  <% pic = current_vendor_pic["photo"].to_s %>
-                  <img style="padding-bottom: 10px" src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" width="400" height="400">
-              <% end %>
+              <%= render 'vendor_photos/show_cover_photo', :vendor_id => vendor.id %>
             </tr>
             <tr>
               <a href="<%= vendor_path(vendor)%>" style="text-align: center; vertical-align: middle" class="vendor-details">
@@ -70,7 +66,7 @@
             </tr>
             <tr>
               <td><a href="#" onclick="showDiv('<%= "showReview"+rowId.to_s %>');"> Show Review </a></td>
-              <td><a href="#" onclick="showDiv('gallery($index)');"> Gallery </a></td>
+              <td><a href="#" onclick="showDiv('<%= "gallery"+rowId.to_s %>');"> Gallery </a></td>
             </tr>
           </table>
         </td>
@@ -82,6 +78,15 @@
           <div id=<%= "showReview"+rowId.to_s %>  style="display:none;" class="vertical-line" >
             <img onclick="hideDiv('<%= "showReview"+rowId.to_s %>');" align="right" src="../../../../../assets/stars/cancel-on.png" padding="10px" />
             <%= render 'vendor_reviews_and_ratings/show_review', :vendor_id => vendor.id %>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="9">
+          <div id=<%= "gallery"+rowId.to_s %>  style="display:none;" class="vertical-line" >
+            <img onclick="hideDiv('<%= "gallery"+rowId.to_s %>');" align="right" src="../../../../../assets/stars/cancel-on.png" padding="10px" />
+            <%= render 'vendor_photos/show', :vendor_id => vendor.id %>
           </div>
         </td>
       </tr>
