@@ -1,7 +1,11 @@
-<% current_vendor_pic = get_all_vendor_photos(vendor_id) %>
-<% if current_vendor_pic != nil %>
-    <% current_vendor_pic.each do |vendor_pic| %>
-        <% pic = vendor_pic["photo"].to_s %>
-        <img style="padding-bottom: 10px" src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" width="400" height="400">
+<div id="review" style="display:block; padding: 10px;">
+    <% current_vendor_pic = get_all_vendor_photos(vendor_id) %>
+    <% if current_vendor_pic.length != 0 %>
+        <% current_vendor_pic.each do |vendor_pic| %>
+            <% pic = vendor_pic["photo"].to_s %>
+            <img style="padding-bottom: 10px" src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" width="400" height="400">
+        <% end %>
+    <% else %>
+        <p> Photos not available </p> <br />
     <% end %>
-<% end %>
+</div>

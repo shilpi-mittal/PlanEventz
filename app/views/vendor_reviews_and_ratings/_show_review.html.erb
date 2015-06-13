@@ -8,7 +8,7 @@
 
   <div style="padding: 10px;">
       <% if @vendor_reviews_and_rating.length == 0 %>
-          <%= "No Reviews yet" %>
+          <p> No Reviews yet. Be first one to add a review </p><br />
       <% else %>
         <% @vendor_reviews_and_rating.each do |vendor_review_rating| %>
           <div style="margin-left: 10%;">

@@ -1,6 +1,6 @@
 class VendorCategoriesController < ApplicationController
   def show
-    @vendor_category = VendorCategory.find(params[:id])["category"]
+    @vendor_category = VendorCategory.find(params[:id])
     @vendor = Vendor.where("category_id=?", params[:id])
     @vendor_photo = VendorPhoto.all
     @page_hit = PageHit.find_by_url(request.original_url)

@@ -18,4 +18,12 @@ module ApplicationHelper
     VendorSubCategory.find(sub_category_id)['sub_category']
   end
 
+  def get_all_categories
+    @vendor_categories = VendorCategory.all
+  end
+
+  def get_all_sub_categories
+    @vendor_categories = VendorSubCategory.all
+  end
+
 end
