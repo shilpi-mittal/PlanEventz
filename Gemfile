@@ -37,6 +37,8 @@ gem 'letsrate'
 
 gem 'coffee-script-source', '1.8.0'
 
+gem 'sunspot_rails'
+
 gem 'social-buttons', git: 'git://github.com/iffyuva/social-buttons.git', branch: 'master'
 
 group :development, :test do
@@ -45,6 +47,8 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  gem 'sunspot_solr'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

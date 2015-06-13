@@ -43,11 +43,17 @@ gem nokogiri
 gem 'letsrate'   //for rating
 gem 'coffee-script-source', '1.8.0'   //for windows
 
+ //for full text search
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+
 
 Commands to start server on local:
 bundle install
 ruby bin/rake db:migrate
 ruby bin/rake db:reset
+rake sunspot:solr:start
+rake sunspot:reindex
 ruby bin/rails server
 
 
@@ -76,3 +82,13 @@ bin/rails generate model Article title:string text:text
 //to add foreign key
 add belongs_to and has_many
 rails g migration add_user_to_tester user_id:integer:index
+
+//for full text search
+rails generate sunspot_rails:install
+
+
+//for full text search
+add to model
+	 searchable do
+		text :title, :body
+		end

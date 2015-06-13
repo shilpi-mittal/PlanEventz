@@ -1,7 +1,11 @@
 <h1 class="page-title"> Plan Your Party </h1>
 
+<%= render 'home/widgets/search' %>
+
 <div class="bg-green">
     <%= render 'vendor_categories/display_all_vendor_categories' %>
 </div>
 
 <%= render 'display_vendors', :@vendor => @vendor %>
+
+<p> Number of Hits : <%= @page_hit.count %></p>

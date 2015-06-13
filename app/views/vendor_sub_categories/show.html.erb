@@ -1,5 +1,7 @@
 <h1 class="page-title"> <%= @vendor_category.category %> </h1>
 
+<%= render 'home/widgets/search' %>
+
 <div class="bg-green">
   <%= render 'vendor_sub_categories/display_all_vendor_sub_categories', :category_id => @vendor_category.id %>
 </div>
@@ -7,3 +9,5 @@
 <h1 class="page-title"> <%= @vendor_sub_category.sub_category %> </h1>
 
 <%= render 'vendors/display_vendors', :@vendor => @vendor %>
+
+<p> Number of Hits : <%= @page_hit.count %></p>

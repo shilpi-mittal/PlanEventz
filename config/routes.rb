@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     resources :vendors
   end
 
+  resource :search_results
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
