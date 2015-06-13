@@ -3,8 +3,28 @@
 <% end %>
 
 <h1><%= @vendor.name %></h1>
-<p> <%= @vendor.description %></p>
-
+        <%= render 'vendor_photos/show_cover_photo', :vendor_id => @vendor.id %>
+        <p><%= overall_rating_for_vendor VendorReviewsAndRating, "rating", "vendor_id", @vendor.id, :enable_half => true, :half_show => true %></p>
+        <p class="vendor-details-heading">Description</p>
+        <p  class="vendor-details-show"> : <%= @vendor.description %></p>
+        <p class="vendor-details-heading">Location</p>
+        <p  class="vendor-details-show"> : <%= @vendor.location %></p>
+        <p><%= render 'vendor_photos/show', :vendor_id => @vendor.id %></p>
+        <p class="vendor-details-heading">Category</p>
+        <p  class="vendor-details-show"> : <%= get_category(@vendor.id) %></p>
+        <p class="vendor-details-heading">Sub-Category</p>
+        <p  class="vendor-details-show"> : <%= get_sub_category(@vendor.id) %></p>
+        <p class="vendor-details-heading">Address</p>
+        <p  class="vendor-details-show"> : <%= @vendor.address %></p>
+        <p class="vendor-details-heading">Phone</p>
+        <p  class="vendor-details-show"> : <%= @vendor.phone %></p>
+        <p class="vendor-details-heading">Website/Email</p>
+        <p class="vendor-details-show"> : <%= @vendor.website %></p>
+        <p class="vendor-details-heading">Events Handled</p>
+        <p class="vendor-details-show"> : <%= @vendor.events_handled %></p>
+        <p class="vendor-details-heading">With Us since</p>
+        <p class="vendor-details-show"> : <%= @vendor.created_at.localtime.strftime('%v') %></p>
+      
 <%= render 'vendor_reviews_and_ratings/show_review', :vendor_id => @vendor.id %>
 
 <p><%= link_to 'Back', vendors_path %></p>

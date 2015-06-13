@@ -108,3 +108,15 @@ img {
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5em;
 }
+
+.vendor-details-heading {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5em;
+    color: orangered;
+}
+
+.vendor-details-show {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5em;
+    padding: 20px;
+}
