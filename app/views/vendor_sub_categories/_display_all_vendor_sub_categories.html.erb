@@ -3,7 +3,7 @@
 <% if vendor_sub_categories.length !=0 %>
 
     <% vendor_sub_categories.each do|sub_category| %>
-        <a href="<%= vendor_category_vendor_sub_category_path(category_id, sub_category.id)%>" style="text-align: center; vertical-align: middle; padding: 10px" class="vendor-details">
+        <a href="<%= vendor_category_vendor_sub_category_path(category_id, sub_category.id)%>" style="text-align: center; vertical-align: middle; padding: 10px" class="details">
           <%= sub_category.sub_category %>
         </a>
     <% end %>

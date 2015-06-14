@@ -52,7 +52,7 @@ Commands to start server on local:
 bundle install
 ruby bin/rake db:migrate
 ruby bin/rake db:reset
-rake sunspot:solr:start
+rake sunspot:solr:run
 rake sunspot:reindex
 ruby bin/rails server
 

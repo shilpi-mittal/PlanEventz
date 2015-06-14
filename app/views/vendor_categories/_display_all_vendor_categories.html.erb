@@ -1,7 +1,7 @@
 <% vendor_categories = get_all_categories %>
 <% if vendor_categories.length !=0 %>
     <% vendor_categories.each do|category| %>
-        <a href="<%= vendor_category_path( category.id)%>" style="text-align: center; vertical-align: middle; padding: 10px" class="vendor-details">
+        <a href="<%= vendor_category_path( category.id)%>" style="text-align: center; vertical-align: middle; padding: 10px" class="details">
           <%= category.category %>
         </a>
     <% end %>

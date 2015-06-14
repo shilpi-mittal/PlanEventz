@@ -104,19 +104,26 @@ img {
     width:100px;
 }
 
-.vendor-details {
+.details {
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5em;
 }
 
-.vendor-details-heading {
+.details-heading {
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5em;
     color: orangered;
 }
 
-.vendor-details-show {
+.details-show {
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5em;
     padding: 20px;
+}
+
+.contact-mail {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5em;
+    color: blueviolet;
+    padding-left: 50px;
 }

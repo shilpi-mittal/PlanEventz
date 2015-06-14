@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  resource :search_results
+
+  resource :online_stores
+  resource :party_packages
+  resource :register_yourself
+  resource :contact_us
+
   resources :vendors do
     resources :vendor_reviews_and_ratings
   end
@@ -24,7 +31,6 @@ Rails.application.routes.draw do
     resources :vendors
   end
 
-  resource :search_results
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

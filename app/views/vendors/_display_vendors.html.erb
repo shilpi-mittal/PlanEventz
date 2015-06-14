@@ -17,7 +17,7 @@
                   <%= render 'vendor_photos/show_cover_photo', :vendor_id => vendor.id %>
                 </tr>
                 <tr>
-                  <a href="<%= vendor_path(vendor)%>" style="text-align: center; vertical-align: middle" class="vendor-details">
+                  <a href="<%= vendor_path(vendor)%>" style="text-align: center; vertical-align: middle" class="details">
                     <p><%= vendor.name %></p>
                   </a>
                 </tr>
@@ -30,40 +30,40 @@
             <td style="padding: 20px;">
               <table>
                 <tr>
-                  <td class="vendor-details">Description</td>
-                  <td  class="vendor-details"> : <%= vendor.description %></td>
+                  <td class="details">Description</td>
+                  <td  class="details"> : <%= vendor.description %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">Location</td>
-                  <td  class="vendor-details"> : <%= vendor.location %></td>
+                  <td class="details">Location</td>
+                  <td  class="details"> : <%= vendor.location %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">Category</td>
-                  <td  class="vendor-details"> : <%= get_category(vendor.id) %></td>
+                  <td class="details">Category</td>
+                  <td  class="details"> : <%= get_category(vendor.id) %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">Sub-Category</td>
-                  <td  class="vendor-details"> : <%= get_sub_category(vendor.id) %></td>
+                  <td class="details">Sub-Category</td>
+                  <td  class="details"> : <%= get_sub_category(vendor.id) %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">Address</td>
-                  <td  class="vendor-details"> : <%= vendor.address %></td>
+                  <td class="details">Address</td>
+                  <td  class="details"> : <%= vendor.address %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">Phone</td>
-                  <td  class="vendor-details"> : <%= vendor.phone %></td>
+                  <td class="details">Phone</td>
+                  <td  class="details"> : <%= vendor.phone %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">Website/Email</td>
-                  <td class="vendor-details"> : <%= vendor.website %></td>
+                  <td class="details">Website/Email</td>
+                  <td class="details"> : <%= vendor.website %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">Events Handled</td>
-                  <td class="vendor-details"> : <%= vendor.events_handled %></td>
+                  <td class="details">Events Handled</td>
+                  <td class="details"> : <%= vendor.events_handled %></td>
                 </tr>
                 <tr>
-                  <td class="vendor-details">With Us since</td>
-                  <td class="vendor-details"> : <%= vendor.created_at.localtime.strftime('%v') %></td>
+                  <td class="details">With Us since</td>
+                  <td class="details"> : <%= vendor.created_at.localtime.strftime('%v') %></td>
                 </tr>
                 <tr>
                   <td><a href="#" onclick="showDiv('<%= "showReview"+rowId.to_s %>');"> Show Review </a></td>
