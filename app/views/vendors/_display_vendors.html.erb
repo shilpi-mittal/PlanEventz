@@ -5,13 +5,13 @@
 <hr style="width: 80%">
 
   <% if @vendor.length != 0 %>
-    <table style="margin-left: 350px">
+    <table style="margin-left: 25%">
      <% rowId=1; %>
 
 
       <% @vendor.each do |vendor| %>
           <tr>
-            <td style="padding: 20px;">
+            <td style="padding: 2%;">
               <table>
                 <tr>
                   <%= render 'vendor_photos/show_cover_photo', :vendor_id => vendor.id %>
@@ -27,7 +27,7 @@
               </table>
             </td>
             <td class="vertical-line" ></td>
-            <td style="padding: 20px;">
+            <td style="padding: 2%;">
               <table>
                 <tr>
                   <td class="details">Description</td>
@@ -77,7 +77,7 @@
           <tr>
             <td colspan="9">
               <div id=<%= "showReview"+rowId.to_s %>  style="display:none;" class="vertical-line" >
-                <img onclick="hideDiv('<%= "showReview"+rowId.to_s %>');" align="right" src="../../../../../assets/stars/cancel-on.png" padding="10px" />
+                <img onclick="hideDiv('<%= "showReview"+rowId.to_s %>');" align="right" src="../../../../../assets/stars/cancel-on.png" padding="1%" />
                 <%= render 'vendor_reviews_and_ratings/show_review', :vendor_id => vendor.id %>
               </div>
             </td>
@@ -86,7 +86,7 @@
           <tr>
             <td colspan="9">
               <div id=<%= "gallery"+rowId.to_s %>  style="display:none;" class="vertical-line" >
-                <img onclick="hideDiv('<%= "gallery"+rowId.to_s %>');" align="right" src="../../../../../assets/stars/cancel-on.png" padding="10px" />
+                <img onclick="hideDiv('<%= "gallery"+rowId.to_s %>');" align="right" src="../../../../../assets/stars/cancel-on.png" padding="1%" />
                 <%= render 'vendor_photos/show', :vendor_id => vendor.id %>
               </div>
             </td>

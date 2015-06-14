@@ -92,3 +92,16 @@ add to model
 	 searchable do
 		text :title, :body
 		end
+
+//for adding auhentication - in controller
+http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
+//for adding delete link
+<%= link_to 'Destroy', article_path(article), method: :delete %>
+
+def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to articles_path
+  end

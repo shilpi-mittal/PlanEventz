@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   post '/rate' => 'rater#create', :as => 'rate'
 
-  resources :articles
-
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,7 +14,7 @@ Rails.application.routes.draw do
 
   resource :online_stores
   resource :party_packages
-  resource :register_yourself
+  resource :register_yourselves
   resource :contact_us
 
   resources :vendors do

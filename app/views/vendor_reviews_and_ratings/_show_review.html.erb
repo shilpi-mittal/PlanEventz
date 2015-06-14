@@ -4,9 +4,9 @@
 
 <% @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", vendor_id) %>
 
-<div id="review" style="display:block; margin-bottom: 10px;">
+<div id="review" style="display:block; margin-bottom: 1%;">
 
-  <div style="padding: 10px;">
+  <div style="padding: 1%;">
       <% if @vendor_reviews_and_rating.length == 0 %>
           <p> No Reviews yet. Be first one to add a review </p><br />
       <% else %>
@@ -23,7 +23,7 @@
       <% end %>
   </div>
 
-  <div style="padding-bottom: 10px; margin-left: 10%;">
+  <div style="padding-bottom: 1%; margin-left: 10%;">
     <%= link_to 'Add Review And Rating', new_vendor_vendor_reviews_and_rating_path(vendor_id) %>
   </div>
 

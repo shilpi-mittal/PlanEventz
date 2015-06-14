@@ -1,5 +1,3 @@
-require 'active_support/core_ext'
-
 class SearchResultsController < ApplicationController
   def show
     @vendor_query = Vendor.search do
