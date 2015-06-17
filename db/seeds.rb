@@ -7,17 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-articles_list = [
-    [ "Germany", 81831000 ],
-    [ "France", 65447374 ],
-    [ "Belgium", 10839905 ],
-    [ "Netherlands", 16680000 ]
-]
-
-articles_list.each do |title, text|
-  Article.create( title: title, text: text )
-end
-
 User.create(firstname: 'anonymous')
 
 Vendor.create(vendor_sub_category_id:1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: 'vendor_phone', description: 'vendor_des', website: 'vendor_web', events_handled: 5, category_id: 1)
@@ -45,6 +34,18 @@ end
 blob = SQLite3::Blob.new img
 VendorPhoto.create(vendor_id:1, photo: blob, description: "abc")
 VendorPhoto.create(vendor_id:2, photo: blob, description: "abc")
+
+begin
+  fin = File.open "app/assets/images/facePainting.jpg" , "rb"
+  img = fin.read
+rescue SystemCallError => e
+  puts e
+ensure
+  fin.close if fin
+end
+
+blob = SQLite3::Blob.new img
+VendorPhoto.create(vendor_id:1, photo: blob, description: "def")
 
 VendorCategory.create(category: 'Attires')
 VendorCategory.create(category: 'Decorators')

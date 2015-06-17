@@ -85,7 +85,7 @@
 
           <tr>
             <td colspan="9">
-              <div id=<%= "gallery"+rowId.to_s %>  style="display:none;" class="vertical-line" >
+              <div id=<%= "gallery"+rowId.to_s %>  style="display:none;" class="vertical-line" style="width: 70%;align-self: center; margin-left: 10%;height: 361px;" >
                 <img onclick="hideDiv('<%= "gallery"+rowId.to_s %>');" align="right" src="../../../../../assets/stars/cancel-on.png" padding="1%" />
                 <%= render 'vendor_photos/show', :vendor_id => vendor.id %>
               </div>

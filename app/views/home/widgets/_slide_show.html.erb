@@ -1,0 +1,26 @@
+<div class="container">
+  <div id="slides">
+    <img src="../../../assets/Slide-show/birthday.jpg" class="slidesjs-image" width="900px" height="505px">
+    <img src="../../../assets/Slide-show/accessories.jpg" class="slidesjs-image" width="900px" height="505px">
+    <img src="../../../assets/Slide-show/corporate_party.jpg" class="slidesjs-image" width="900px" height="505px">
+    <img src="../../../assets/Slide-show/catering.jpg" class="slidesjs-image" width="900px" height="505px">
+  </div>
+</div>
+
+<%= javascript_include_tag 'jquery.slides.min.js'%>
+<%= javascript_include_tag 'jquery.slides.js'%>
+
+<script>
+    $(function() {
+        $('#slides').slidesjs({
+            width: 940,
+            height: 528,
+            play: {
+                active: true,
+                auto: true,
+                interval: 4000,
+                swap: true
+            }
+        });
+    });
+</script>
