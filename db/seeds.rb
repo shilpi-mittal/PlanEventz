@@ -7,6 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+def picToBlob(image_file)
+  begin
+    fin = File.open image_file, "rb"
+    img = fin.read
+  rescue SystemCallError => e
+    puts e
+  ensure
+    fin.close if fin
+  end
+
+  blob = SQLite3::Blob.new img
+end
+
 User.create(firstname: 'anonymous')
 
 Vendor.create(vendor_sub_category_id:1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: 'vendor_phone', description: 'vendor_des', website: 'vendor_web', events_handled: 5, category_id: 1)
@@ -22,29 +35,11 @@ VendorReviewsAndRating.create(review:"Review 4", rating: 1, vendor_id: 2, user_i
 
 PageHit.create(url:"http://localhost:3000/vendors/1", count:0)
 
-begin
-  fin = File.open "app/assets/images/partyTable.jpg" , "rb"
-  img = fin.read
-rescue SystemCallError => e
-  puts e
-ensure
-  fin.close if fin
-end
-
-blob = SQLite3::Blob.new img
+blob = picToBlob("app/assets/images/partyTable.jpg")
 VendorPhoto.create(vendor_id:1, photo: blob, description: "abc")
 VendorPhoto.create(vendor_id:2, photo: blob, description: "abc")
 
-begin
-  fin = File.open "app/assets/images/facePainting.jpg" , "rb"
-  img = fin.read
-rescue SystemCallError => e
-  puts e
-ensure
-  fin.close if fin
-end
-
-blob = SQLite3::Blob.new img
+blob = picToBlob("app/assets/images/facePainting.jpg")
 VendorPhoto.create(vendor_id:1, photo: blob, description: "def")
 
 VendorCategory.create(category: 'Attires')
@@ -60,7 +55,12 @@ VendorCategory.create(category: 'Rental Providers')
 VendorCategory.create(category: 'Transport Providers')
 VendorCategory.create(category: 'Venue Providers')
 
-VendorSubCategory.create(sub_category: 'Birthday Party')
-VendorSubCategory.create(sub_category: 'Co-operate Party')
-VendorSubCategory.create(sub_category: 'Wedding')
-VendorSubCategory.create(sub_category: 'Get Together')
+
+blob = picToBlob("app/assets/images/sub_categories/birthday.jpg")
+VendorSubCategory.create(sub_category: 'Birthday Party', pic:blob)
+blob = picToBlob("app/assets/images/sub_categories/cooperate_party.jpg")
+VendorSubCategory.create(sub_category: 'Co-operate Party', pic:blob)
+blob = picToBlob("app/assets/images/sub_categories/wedding.jpg")
+VendorSubCategory.create(sub_category: 'Wedding', pic:blob)
+blob = picToBlob("app/assets/images/sub_categories/get_together.jpg")
+VendorSubCategory.create(sub_category: 'Get Together', pic:blob)
