@@ -33,7 +33,7 @@ VendorReviewsAndRating.create(review:"Review 2", rating: 1, vendor_id: 1, user_i
 VendorReviewsAndRating.create(review:"Review 3", rating: 1, vendor_id: 2, user_id: 1)
 VendorReviewsAndRating.create(review:"Review 4", rating: 1, vendor_id: 2, user_id: 1)
 
-PageHit.create(url:"http://localhost:3000/vendors/1", count:0)
+PageHit.create(url:"/vendors/1", count:0)
 
 blob = picToBlob("app/assets/images/partyTable.jpg")
 VendorPhoto.create(vendor_id:1, photo: blob, description: "abc")
