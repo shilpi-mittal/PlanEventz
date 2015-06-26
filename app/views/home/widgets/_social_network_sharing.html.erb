@@ -21,22 +21,3 @@
   </div>
 </div>
 <br />
-
-
-<ul class="social-share-list list-inline">
-  <li class="twt">
-    <%= tweet_button count: 'horizontal',
-                     related: 'realted_twitter_handle',
-                     text: ' ' + @url,
-                     url: @url,
-                     via: 'your_twitter_handle' %>
-  </li>
-  <li class="gp">
-    <%= google_plus_button href: @url,
-                           script: true,
-                           annotations: :bubble,
-                           size: :medium %>
-  </li>
-  <!--<li class="fb">-->
-  <!--</li>-->
-</ul>

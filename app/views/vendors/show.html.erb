@@ -2,29 +2,75 @@
     <%= javascript_include_tag 'jquery.raty.js','letsrate.js'%>
 <% end %>
 
-<h1><%= @vendor.name %></h1>
-        <%= render 'vendor_photos/show_cover_photo', :vendor_id => @vendor.id %>
-        <p><%= overall_rating_for_vendor VendorReviewsAndRating, "rating", "vendor_id", @vendor.id, :enable_half => true, :half_show => true %></p>
-        <p class="details-heading">Description</p>
-        <p  class="details-show"> : <%= @vendor.description %></p>
-        <p class="details-heading">Location</p>
-        <p  class="details-show"> : <%= @vendor.location %></p>
-        <p><%= render 'vendor_photos/show', :vendor_id => @vendor.id %></p>
-        <p class="details-heading">Category</p>
-        <p  class="details-show"> : <%= get_category(@vendor.id) %></p>
-        <p class="details-heading">Sub-Category</p>
-        <p  class="details-show"> : <%= get_sub_category(@vendor.id) %></p>
-        <p class="details-heading">Address</p>
-        <p  class="details-show"> : <%= @vendor.address %></p>
-        <p class="details-heading">Phone</p>
-        <p  class="details-show"> : <%= @vendor.phone %></p>
-        <p class="details-heading">Website/Email</p>
-        <p class="details-show"> : <%= @vendor.website %></p>
-        <p class="details-heading">Events Handled</p>
-        <p class="details-show"> : <%= @vendor.events_handled %></p>
-        <p class="details-heading">With Us since</p>
-        <p class="details-show"> : <%= @vendor.created_at.localtime.strftime('%v') %></p>
-      
-<%= render 'vendor_reviews_and_ratings/show_review', :vendor_id => @vendor.id %>
+<div style="padding-left: 5%">
 
-<p><%= link_to 'Back', vendors_path %></p>
+<div class="page-title">
+  <%= @vendor.name %>
+</div>
+
+<div style="padding-left: 38%">
+<%= render 'vendor_photos/show_cover_photo', :vendor_id => @vendor.id %>
+<p><%= overall_rating_for_vendor VendorReviewsAndRating, "rating", "vendor_id", @vendor.id, :enable_half => true, :half_show => true %></p>
+</div>
+
+  <div style="padding-left: 20%">
+  <table>
+    <tr>
+        <td>
+        <table>
+          <tr>
+            <td class="details-heading">Description </td>
+            <td  class="details-show"> : <%= @vendor.description %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">Location</td>
+            <td  class="details-show"> : <%= @vendor.location %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">Category</td>
+            <td  class="details-show"> : <%= get_category(@vendor.id) %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">Sub-Category</td>
+            <td  class="details-show"> : <%= get_sub_category(@vendor.id) %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">Address</td>
+            <td  class="details-show"> : <%= @vendor.address %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">Phone</td>
+            <td  class="details-show"> : <%= @vendor.phone %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">Website/Email</td>
+            <td class="details-show"> : <%= @vendor.website %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">Events Handled</td>
+            <td class="details-show"> : <%= @vendor.events_handled %></td>
+          </tr>
+          <tr>
+            <td class="details-heading">With Us since</td>
+            <td class="details-show"> : <%= @vendor.created_at.localtime.strftime('%v') %></td>
+          </tr>
+          </table>
+        </td>
+
+        <td style="padding-left: 10%; padding-top: 20%;" >
+          <%= render 'vendor_photos/show', :vendor_id => @vendor.id %>
+        </td>
+    </tr>
+  </table>
+  </div>
+
+  <hr style="width: 90%">
+  <div class="details-heading" style="padding-left: 5%">Reviews</div>
+  <%= render 'vendor_reviews_and_ratings/show_review', :vendor_id => @vendor.id %>
+  <hr style="width: 90%">
+
+  <a href="<%= vendor_path(@vendor, @vendor_all_reviews_and_rating)%>" class="details">
+    <img align="left" src="../../../../../assets/vendor_details/back.png" padding="1%" title="Back" style="padding-left: 5%;"/>
+    Back
+  </a>
+</div>
