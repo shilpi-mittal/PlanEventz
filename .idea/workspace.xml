@@ -2,32 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22562c4a-12af-41f3-8ded-0e19c4ed92a2" name="Default" comment="adding slide show - animation for home page and gallery for vendor info and details page">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/address.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/back1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/calendar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/category.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/delete.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/description.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/details.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/details1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/gallery.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/gallery1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/gallery2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/location.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/phone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/progress.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/reviews.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/reviews1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/search1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/sub_category.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/submit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/tag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/website.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/write_review_and_rating.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/vendor_details/write_review_and_rating1.png" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\index\_i.fdt" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\index\_i.fdx" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\index\_i.fnm" afterPath="" />
@@ -71,12 +45,7 @@
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000019" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000020" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solr/development/data/index/segments.gen" afterPath="$PROJECT_DIR$/solr/development/data/index/segments.gen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" afterPath="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/widgets/_search.html.erb" afterPath="$PROJECT_DIR$/app/views/home/widgets/_search.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show_review.html.erb" afterPath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show_review.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/widgets/_social_network_sharing.html.erb" afterPath="$PROJECT_DIR$/app/views/home/widgets/_social_network_sharing.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/new.html.erb" afterPath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendors/show.html.erb" afterPath="$PROJECT_DIR$/app/views/vendors/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/vendor.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/vendor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="planEventz.iws" />
@@ -109,29 +78,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_display_all_vendor_categories.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/vendor_categories/_display_all_vendor_categories.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-              <folding>
-                <element signature="e#94#139#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_display_vendors.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3846154">
-              <caret line="69" column="221" selection-start-line="69" selection-start-column="85" selection-end-line="69" selection-end-column="221" />
+            <state vertical-scroll-proportion="-17.807692">
+              <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
               <folding>
                 <element signature="e#121#139#0#HTML" expanded="true" />
                 <element signature="e#184#208#0#HTML" expanded="true" />
                 <element signature="e#3739#3765#0#HTML" expanded="true" />
                 <element signature="e#3836#3886#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vendor.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/vendor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.09476031">
+              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,10 +177,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_social_network_sharing.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_social_network_sharing.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/widgets/_social_network_sharing.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4293915">
+            <state vertical-scroll-proportion="-14.384615">
               <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
               <folding />
             </state>
@@ -241,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/vendor_sub_category.rb" />
         <option value="$PROJECT_DIR$/app/controllers/vendor_sub_categories_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/search_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/vendor.rb" />
@@ -292,6 +258,7 @@
         <option value="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show_review.html.erb" />
         <option value="$PROJECT_DIR$/app/views/vendors/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/widgets/_social_network_sharing.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/vendor.js" />
       </list>
     </option>
   </component>
@@ -1373,7 +1340,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435348025137</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="adding images to vendor details and modifying the UI of show vendor and add review page">
+      <created>1435358986422</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1435358986422</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1443,7 +1416,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="combining vendor ratings and reviews in asingle table" />
     <MESSAGE value="disallowing user to edit overall rating" />
     <MESSAGE value="user can add review and rating to a vendor" />
     <MESSAGE value="modifying text on submit review and rating button, modifying date time format on vendor page, adding validation on rating" />
@@ -1468,7 +1440,8 @@
     <MESSAGE value="adding images to sub-categories" />
     <MESSAGE value="using relative urls in nav bar" />
     <MESSAGE value="adding images for categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding images for categories" />
+    <MESSAGE value="adding images to vendor details and modifying the UI of show vendor and add review page" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding images to vendor details and modifying the UI of show vendor and add review page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1484,13 +1457,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/online_stores/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/rater_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1780,7 +1746,7 @@
         <state vertical-scroll-proportion="-13.730769">
           <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
-            <element signature="e#94#139#0#HTML" expanded="true" />
+            <element signature="e#94#139#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1829,19 +1795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3846154">
-          <caret line="69" column="221" selection-start-line="69" selection-start-column="85" selection-end-line="69" selection-end-column="221" />
-          <folding>
-            <element signature="e#121#139#0#HTML" expanded="true" />
-            <element signature="e#184#208#0#HTML" expanded="true" />
-            <element signature="e#3739#3765#0#HTML" expanded="true" />
-            <element signature="e#3836#3886#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show_review.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.307692">
@@ -1870,8 +1823,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/widgets/_social_network_sharing.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4293915">
+        <state vertical-scroll-proportion="-14.384615">
           <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.807692">
+          <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+          <folding>
+            <element signature="e#121#139#0#HTML" expanded="true" />
+            <element signature="e#184#208#0#HTML" expanded="true" />
+            <element signature="e#3739#3765#0#HTML" expanded="true" />
+            <element signature="e#3836#3886#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/vendor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09476031">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
           <folding />
         </state>
       </provider>
