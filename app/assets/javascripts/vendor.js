@@ -3,10 +3,14 @@
 
 function showDiv(id) {
     document.getElementById(id).style.display = "block";
-    $('html, body').animate({
-            scrollTop: $("#"+id).offset().top-100},1000);
+   scrollToElement(id)
 }
 
 function hideDiv(id) {
     document.getElementById(id).style.display = "none";
+}
+
+function scrollToElement(elementId) {
+    $('html, body').animate({
+        scrollTop: $("#"+elementId).offset().top-100},1000);
 }
