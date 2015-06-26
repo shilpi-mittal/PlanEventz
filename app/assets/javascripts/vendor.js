@@ -4,7 +4,7 @@
 function showDiv(id) {
     document.getElementById(id).style.display = "block";
     $('html, body').animate({
-            scrollTop: $("#"+id).offset().top-100},100);
+            scrollTop: $("#"+id).offset().top-100},1000);
 }
 
 function hideDiv(id) {
