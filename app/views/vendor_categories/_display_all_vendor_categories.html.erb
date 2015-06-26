@@ -1,8 +1,22 @@
 <% vendor_categories = get_all_categories %>
 <% if vendor_categories.length !=0 %>
-    <% vendor_categories.each do|category| %>
-        <a href="<%= vendor_category_path( category.id)%>" style="text-align: center; vertical-align: middle; padding: 1%" class="details">
-          <%= category.category %>
-        </a>
-    <% end %>
+    <table style="margin-left: 20%; horiz-align: center">
+      <% count =0; %>
+        <% vendor_categories.each do|category| %>
+          <% count = count+1; %>
+            <td style="text-align: center; vertical-align: middle; padding: 2%" class="details">
+              <a href="<%= vendor_category_path( category.id)%>">
+                <% pic = category.pic.to_s %>
+                <% if pic.length!=0 %>
+                    <img src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" title="<%= category.category %>" class="slidesjs-image" width="150px " height="100px" style="border-radius: 100px" >
+                <% else %>
+                  <%= category.category %>
+                <% end %>
+              </a>
+            </td>
+          <% if(count==6) %>
+            <tr></tr>
+              <% end %>
+        <% end %>
+    </table>
 <% end %>
