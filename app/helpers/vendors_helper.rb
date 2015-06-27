@@ -96,12 +96,12 @@ module VendorsHelper
 
     def get_category(vendor_id)
       category_id = Vendor.find(vendor_id)['category_id']
-      VendorCategory.find(category_id)['category']
+      VendorCategory.find(category_id)['category'].strip
     end
 
     def get_sub_category(vendor_id)
       sub_category_id = Vendor.find(vendor_id)['vendor_sub_category_id']
-      VendorSubCategory.find(sub_category_id)['sub_category']
+      VendorSubCategory.find(sub_category_id)['sub_category'].strip
     end
 
     def get_all_categories

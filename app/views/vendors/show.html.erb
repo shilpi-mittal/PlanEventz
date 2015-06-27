@@ -9,7 +9,7 @@
 <div style="padding-left: 5%">
 
 <div class="page-title">
-  <%= @vendor.name %>
+  <%= @vendor.name.strip %>
 </div>
 
 <div style="padding-left: 38%">
@@ -24,11 +24,11 @@
         <table>
           <tr>
             <td class="details-heading">Description </td>
-            <td  class="details-show"> : <%= @vendor.description %></td>
+            <td  class="details-show"> : <%= @vendor.description.strip %></td>
           </tr>
           <tr>
             <td class="details-heading">Location</td>
-            <td  class="details-show"> : <%= @vendor.location %></td>
+            <td  class="details-show"> : <%= @vendor.location.strip %></td>
           </tr>
           <tr>
             <td class="details-heading">Category</td>
@@ -40,15 +40,15 @@
           </tr>
           <tr>
             <td class="details-heading">Address</td>
-            <td  class="details-show"> : <%= @vendor.address %></td>
+            <td  class="details-show"> : <%= @vendor.address.strip %></td>
           </tr>
           <tr>
             <td class="details-heading">Phone</td>
-            <td  class="details-show"> : <%= @vendor.phone %></td>
+            <td  class="details-show"> : <%= @vendor.phone.strip %></td>
           </tr>
           <tr>
             <td class="details-heading">Website/Email</td>
-            <td class="details-show"> : <%= @vendor.website %></td>
+            <td class="details-show"> : <%= @vendor.website.strip %></td>
           </tr>
           <tr>
             <td class="details-heading">Events Handled</td>
