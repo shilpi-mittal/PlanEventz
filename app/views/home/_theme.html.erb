@@ -21,7 +21,6 @@
   the FB.login() function when clicked.
 -->
 
-<div align="right" style="padding: 0.5%; margin-right: 2%;">
-  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-  </fb:login-button>
+<div align="right" style="padding: 0.5%; margin-right: 2%;" id="fb-login">
+  <fb:login-button autologoutlink="true"></fb:login-button>
 </div>
