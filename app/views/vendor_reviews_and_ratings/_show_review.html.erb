@@ -2,7 +2,7 @@
     <%= javascript_include_tag 'jquery.raty.js','letsrate.js'%>
 <% end %>
 
-<% @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", vendor_id) %>
+<% @vendor_reviews_and_rating = show_review(vendor_id) %>
 
 <div id="review" style="display:block; margin-bottom: 1%;">
 

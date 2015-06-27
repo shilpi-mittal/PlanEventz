@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resource :party_packages
   resource :register_yourselves
   resource :contact_us
+  resource :about_us
+  resource :blog
 
   resources :vendors do
     resources :vendor_reviews_and_ratings

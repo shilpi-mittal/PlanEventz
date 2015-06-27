@@ -11,13 +11,11 @@
 
   <%= javascript_include_tag 'jquery-1.11.3.min.js'%>
 </head>
-<body>
+<body style="padding-top: 0.1%;">
 
 <%= yield :javascript_includes %>
 
 <%= render 'home/theme' %>
-<%= render 'home/navigation' %>
-<p></p>
 <%= yield %>
 </body>
 </html>

@@ -112,4 +112,7 @@ module VendorsHelper
       @vendor_categories = VendorSubCategory.all
     end
 
+    def show_review(vendor_id)
+      @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", vendor_id).order('created_at desc')
+    end
 end

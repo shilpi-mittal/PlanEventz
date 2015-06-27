@@ -5,7 +5,8 @@
 <hr style="width: 80%">
 
   <% if @vendor.length != 0 %>
-    <table style="margin-left: 25%">
+    <div align="center">
+      <table>
      <% rowId=1; %>
 
 
@@ -103,5 +104,6 @@
       <% end %>
     </table>
   <% else %>
-    <p> No vendor to display </p><br />
+    <p class="details-show" align="center"> No vendor to display </p><br />
   <%end %>
+        </div>

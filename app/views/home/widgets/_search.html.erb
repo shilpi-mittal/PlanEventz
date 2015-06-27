@@ -1,6 +1,12 @@
-<%= form_tag search_results_path, :method => :get do %>
-    <p align="right" style="padding: 1%">
-      <%= text_field_tag :search, params[:search] %>
+<div class="details">
+
+ <%= form_tag search_results_path, :method => :get do %>
+    <p style="padding: 1%;">
+      <div align="center" style="border: ridge; border-radius: 10px; background-color: whitesmoke; width:35%; margin-left: 30%;" >
+      <%= select_tag(:city_id, options_for_select([['Bangalore', 1]]))%>
+      <%= text_field_tag :search, params[:search], :placeholder=>'Search vendor, category, sub-category...', :size=>35 , :style=>"border: ridge;border-radius: 10px;"%>
       <%= image_submit_tag ("vendor_details/search.png") %>
+      </div>
     </p>
 <% end %>
+</div>

@@ -4,10 +4,6 @@ class VendorReviewsAndRatingsController < ApplicationController
     @vendor_reviews_and_rating = VendorReviewsAndRating.new
   end
 
-  def show_review(vendor_id)
-    @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", vendor_id)
-  end
-
   def show
   end
 
@@ -24,8 +20,6 @@ class VendorReviewsAndRatingsController < ApplicationController
     end
     @vendor_all_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", params[:vendor_id])
   end
-
-  helper_method :show_review
 
   private
   def review_and_rating_params
