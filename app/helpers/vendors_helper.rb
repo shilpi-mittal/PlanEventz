@@ -87,7 +87,7 @@ module VendorsHelper
     end
 
     def get_vendor_cover_photo(vendor_id)
-      @vendor_photo = VendorPhoto.find_by_vendor_id(vendor_id)
+      @vendor_photo = Vendor.find(vendor_id)['cover_pic']
     end
 
     def get_all_vendor_photos(vendor_id)

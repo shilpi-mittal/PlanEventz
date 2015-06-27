@@ -1,0 +1,20 @@
+<div class="menuleftcontent vertical-line"  style="margin-left: 0.5%">
+    <% vendor_categories = get_all_categories %>
+    <% if vendor_categories.length !=0 %>
+        <div align="center">
+          <p class="details-show"> Categories </p>
+          <% vendor_categories.each do|category| %>
+          <hr size="1" width="90%" />
+              <p style="text-align: center; vertical-align: middle; padding: 2%" class="details">
+
+                <!--<a href="#" onclick="showDiv('vendors_div');"> <\= category.category %> </a>-->
+
+
+                <a href="<%= vendor_category_path( category.id)%>">
+                      <%= category.category %>
+                </a>
+              </p>
+          <% end %>
+        </div>
+    <% end %>
+</div>

@@ -1,5 +1,5 @@
 <% current_vendor_pic = get_vendor_cover_photo(vendor_id) %>
 <% if current_vendor_pic != nil %>
-    <% pic = current_vendor_pic["photo"].to_s %>
+    <% pic = current_vendor_pic.to_s %>
     <img style="padding-bottom: 1%" src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" width="400" height="400">
 <% end %>

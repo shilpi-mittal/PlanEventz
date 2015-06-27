@@ -1,20 +1,20 @@
 <div align="right" style="margin-left: 40%;">
 <%= render 'home/widgets/menu' %>
 </div>
-<div class="bg-green">
+<!--<div class="bg-green">-->
 <%= render 'home/widgets/search' %>
 
-<%= render 'vendor_categories/display_all_vendor_categories' %>
-</div>
+<!--<= render 'vendor_categories/display_all_vendor_categories' %>-->
+<!--</div>-->
 
 <h1 class="page-title"> <%=@vendor_category.category%> </h1>
 
 
 <div class="bg-green">
-  <%= render 'vendor_sub_categories/display_all_vendor_sub_categories', :category_id => @vendor_category.id %>
+  <%= render 'home/widgets/left_panel_categories' %>
 </div>
 
-<div class="maincontent" align="center">
+<div class="maincontent" align="center" id="vendors_div">
     <%= render 'vendors/display_vendors', :@vendor => @vendor %>
 </div>
 
