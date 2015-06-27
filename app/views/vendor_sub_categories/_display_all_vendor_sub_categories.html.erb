@@ -1,20 +1,28 @@
+<div class="menuleftcontent vertical-line"  style="margin-left: 1%">
 <% vendor_sub_categories = get_all_sub_categories() %>
 
 <% if vendor_sub_categories.length !=0 %>
 
-    <table style="margin-left: 15%; horiz-align: center">
+      <div class="details-show" align="center">
+        Sub-Categories
+      </div>
+      <hr style="width: 80%">
+
+
+    <div style="margin-left: 15%; horiz-align: center">
         <% vendor_sub_categories.each do|sub_category| %>
-          <td style="text-align: center; vertical-align: middle; padding: 1%" class="details">
+          <p style="text-align: center; vertical-align: middle; padding: 1%" class="details">
             <a href="<%= vendor_category_vendor_sub_category_path(category_id, sub_category.id)%>" >
               <% pic = sub_category.pic.to_s %>
               <% if pic!=nil %>
-                <img src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" class="slidesjs-image" width="300px " height="300px" style="border-radius: 250px">
+                <img src="data:image/jpg;base64,<%= (Base64.encode64(pic)) %>" class="slidesjs-image" width="200px " height="200px" style="border-radius: 250px">
               <% end %>
-              <p>
+              <p align="center">
                   <%= sub_category.sub_category %>
               </p>
             </a>
-          </td>
+          </p>
         <% end %>
-    </table>
+    </div>
 <% end %>
+</div>

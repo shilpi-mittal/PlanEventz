@@ -134,3 +134,18 @@ img {
     color: blueviolet;
     padding-left: 50px;
 }
+
+.page {
+    width:100%;
+    min-height:900px;
+}
+
+.menuleftcontent{
+    min-width:15%;
+    float:left;
+}
+
+.maincontent{
+    min-width:83%;
+    float:left;
+}
