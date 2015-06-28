@@ -10,6 +10,12 @@
   <%= stylesheet_link_tag "navigation" %>
 
   <%= javascript_include_tag 'jquery-1.11.3.min.js'%>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <script type="text/javascript" src="query.lazyscrollloading-src.js"></script>
 </head>
 <body style="padding-top: 0.1%;" class="page">
 
@@ -17,5 +23,7 @@
 
 <%= render 'home/theme' %>
 <%= yield %>
+
+
 </body>
 </html>
