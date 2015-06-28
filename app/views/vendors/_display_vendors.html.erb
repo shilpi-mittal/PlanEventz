@@ -31,7 +31,10 @@
               <table>
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/description.png" padding="1%" /></td>
-                  <td  class="details"> : <%= vendor.description.strip %></td>
+                  <td  class="details"> : <% if vendor.description!=nil %>
+                    <%= vendor.description.strip %>
+                            <% end %>
+                        </td>
                 </tr>
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/location.png" padding="1%" /></td>
@@ -47,7 +50,10 @@
                 <!--</tr>-->
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/address.png" padding="1%" /></td>
-                  <td  class="details"> : <%= vendor.address.strip %></td>
+                  <td  class="details"> :<% if vendor.address!=nil %>
+                        <%= vendor.address.strip %>
+                        <% end %>
+                        </td>
                 </tr>
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/phone.png" padding="1%" /></td>
@@ -55,11 +61,17 @@
                 </tr>
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/web.png" padding="1%" /></td>
-                  <td class="details"> : <%= vendor.website.strip %></td>
+                  <td class="details"> :<% if vendor.website!=nil %>
+                        <%= vendor.website.strip %>
+                        <% end %>
+                        </td>
                 </tr>
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/progress.png" padding="1%" /></td>
-                  <td class="details"> : <%= vendor.events_handled %></td>
+                  <td class="details"> :<% if vendor.events_handled!=nil %>
+                        <%= vendor.events_handled %>
+                        <% end %>
+                        </td>
                 </tr>
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/calendar.png" padding="1%" /></td>

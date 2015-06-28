@@ -24,7 +24,10 @@
         <table>
           <tr>
             <td class="details-heading">Description </td>
-            <td  class="details-show"> : <%= @vendor.description.strip %></td>
+            <td  class="details-show"> :<% if @vendor.description!=nil %>
+                  <%= @vendor.description.strip %>
+              <% end %>
+            </td>
           </tr>
           <tr>
             <td class="details-heading">Location</td>
@@ -40,7 +43,10 @@
           <!--</tr>-->
           <tr>
             <td class="details-heading">Address</td>
-            <td  class="details-show"> : <%= @vendor.address.strip %></td>
+            <td  class="details-show"> : <% if @vendor.address!=nil %>
+                  <%= @vendor.address.strip %>
+              <% end %>
+            </td>
           </tr>
           <tr>
             <td class="details-heading">Phone</td>
@@ -48,11 +54,17 @@
           </tr>
           <tr>
             <td class="details-heading">Website/Email</td>
-            <td class="details-show"> : <%= @vendor.website.strip %></td>
+            <td class="details-show"> : <% if @vendor.website!=nil %>
+                  <%= @vendor.website.strip %>
+              <% end %>
+            </td>
           </tr>
           <tr>
             <td class="details-heading">Events Handled</td>
-            <td class="details-show"> : <%= @vendor.events_handled %></td>
+            <td class="details-show"> :<% if @vendor.events_handled!=nil %>
+                  <%= @vendor.events_handled %>
+              <% end %>
+            </td>
           </tr>
           <tr>
             <td class="details-heading">With Us since</td>

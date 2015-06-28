@@ -31,11 +31,11 @@ class VendorsController < ApplicationController
     @vendor = Vendor.new(vendor_params)
     uploaded_io = params[:vendor][:cover_pic]
     if uploaded_io!=nil
-      @vendor.cover_pic = picToBlob(uploaded_io.read)
+      @vendor.cover_pic = SQLite3::Blob.new uploaded_io.read
     end
 
     if @vendor.save
-      redirect_to Vendor.all
+      redirect_to vendor_path(@vendor.id)
     else
       render 'new'
     end
