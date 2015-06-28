@@ -150,15 +150,17 @@ img {
     float:left;
 }
 
-a:visited {
-    text-decoration: none;
-    color: #F01;
-    font-weight:bolder;
-}
+/*a:visited {*/
+    /*text-decoration: none ;*/
+    /*color: #F01;*/
+    /*font-weight:bolder;*/
+/*}*/
+
 a:hover {
     text-decoration: underline;
     color: #990;
 }
+
 a:active {
     text-decoration: none;
     color: #93F;

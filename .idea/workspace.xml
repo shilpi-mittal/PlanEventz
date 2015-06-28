@@ -45,10 +45,9 @@
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000019" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000020" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solr/development/data/index/segments.gen" afterPath="$PROJECT_DIR$/solr/development/data/index/segments.gen" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_theme.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_theme.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/facebook.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/facebook.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/new.html.erb" afterPath="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendors/new.html.erb" afterPath="$PROJECT_DIR$/app/views/vendors/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/theme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/vendor_reviews_and_ratings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/vendor_reviews_and_ratings_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -83,11 +82,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4098737">
+            <state vertical-scroll-proportion="-13.730769">
               <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_theme.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/_theme.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.0">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,11 +152,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="theme.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="170" column="1" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.5830546">
+              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -198,7 +207,6 @@
         <option value="$PROJECT_DIR$/app/views/home/widgets/_social_network_sharing.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application1.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/_theme.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/vendor.js" />
@@ -222,9 +230,10 @@
         <option value="$PROJECT_DIR$/app/helpers/vendors_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/vendor.rb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
         <option value="$PROJECT_DIR$/app/views/vendors/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_theme.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/theme.css" />
       </list>
     </option>
   </component>
@@ -1486,7 +1495,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435500340988</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="adding asterix to mandatory fields">
+      <created>1435500712655</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1435500712655</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1535,7 +1550,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding images to gallery and refactoring code" />
     <MESSAGE value="adding all categories and sub categories to seed and correcting uels in navigation partial view" />
     <MESSAGE value="displaying vendor categories and sub-categories and linking them to vendor pages" />
     <MESSAGE value="correcting home url in navigation widget partial view" />
@@ -1560,7 +1574,8 @@
     <MESSAGE value="adding add your business page" />
     <MESSAGE value="fixing view for newly added business" />
     <MESSAGE value="putting in validations for vendor fields and adding custom messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="putting in validations for vendor fields and adding custom messages" />
+    <MESSAGE value="adding asterix to mandatory fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding asterix to mandatory fields" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1653,13 +1668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_theme.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1935,14 +1943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="1" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.846153">
@@ -1969,8 +1969,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4098737">
+        <state vertical-scroll-proportion="-13.730769">
           <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_theme.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5830546">
+          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding />
         </state>
       </provider>
