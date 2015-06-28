@@ -16,12 +16,12 @@ class VendorsController < ApplicationController
 
   def create
     @vendor = Vendor.new(vendor_params)
-    if @vendor.save
       uploaded_io = params[:vendor][:cover_pic]
       if uploaded_io!=nil
         @vendor.cover_pic = SQLite3::Blob.new uploaded_io.read
       end
 
+    if @vendor.save
       uploaded_io = params[:vendor][:gallery_pic]
       if uploaded_io!=nil
         uploaded_io.each do |pic|
