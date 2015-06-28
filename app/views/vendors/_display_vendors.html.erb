@@ -76,6 +76,13 @@
                         <% end %>
                         </td>
                 </tr>
+
+                <tr>
+                  <td class="details"> <img align="left" src="../../../../../assets/vendor_details/review.png" padding="1%" /></td>
+                  <td class="details"> : <%= get_number_of_reviews(vendor.id) %>
+                  </td>
+                </tr>
+
                 <tr>
                   <td class="details"> <img align="left" src="../../../../../assets/vendor_details/calendar.png" padding="1%" /></td>
                   <td class="details"> : <%= vendor.created_at.localtime.strftime('%v') %></td>

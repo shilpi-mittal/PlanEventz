@@ -115,4 +115,8 @@ module VendorsHelper
     def show_review(vendor_id)
       @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", vendor_id).order('created_at desc')
     end
+
+    def get_number_of_reviews(vendor_id)
+      show_review(vendor_id).count
+    end
 end

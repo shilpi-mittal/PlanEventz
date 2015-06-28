@@ -67,6 +67,11 @@
             </td>
           </tr>
           <tr>
+            <td class="details-heading">Number Of Reviewers</td>
+            <td class="details-show"> : <%= get_number_of_reviews(@vendor.id) %>
+            </td>
+          </tr>
+          <tr>
             <td class="details-heading">With Us since</td>
             <td class="details-show"> : <%= @vendor.created_at.localtime.strftime('%v') %></td>
           </tr>

@@ -10,6 +10,10 @@
       <% if @vendor_reviews_and_rating.length == 0 %>
           <p> No Reviews yet. Be first one to add a review </p><br />
       <% else %>
+        <div style="margin-left: 10%;" class="details-show">
+          Showing <%=get_number_of_reviews(vendor_id) %> reviews
+          <p></p>
+        </div>
         <% @vendor_reviews_and_rating.each do |vendor_review_rating| %>
           <div style="margin-left: 10%;">
             <p>On <%= vendor_review_rating.created_at.localtime.strftime('%v') %> <%= vendor_review_rating.created_at.localtime.strftime('%r') %></p>
