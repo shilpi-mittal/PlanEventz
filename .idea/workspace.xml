@@ -6,8 +6,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/google.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/google.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/google_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.lazyscrollloading-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.lazyscrollloading-src.js" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\index\_i.fdt" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\index\_i.fdx" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\index\_i.fnm" afterPath="" />
@@ -51,10 +49,8 @@
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000019" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000020" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solr/development/data/index/segments.gen" afterPath="$PROJECT_DIR$/solr/development/data/index/segments.gen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/widgets/_search.html.erb" afterPath="$PROJECT_DIR$/app/views/home/widgets/_search.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" afterPath="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_theme.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_theme.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/facebook.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/facebook.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/user_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/user_helper.rb" />
@@ -91,14 +87,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_theme.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/_theme.html.erb">
+      <file leaf-file-name="_display_vendors.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.615385">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.15614237">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,14 +117,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3411371">
+            <state vertical-scroll-proportion="0.0">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/vendors/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -185,16 +189,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_search.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/widgets/_search.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
-              <caret line="4" column="92" selection-start-line="4" selection-start-column="92" selection-end-line="4" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="GeneratorOptions">
@@ -241,7 +235,6 @@
         <option value="$PROJECT_DIR$/app/views/about_us/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/vendors_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/vendors/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/vendors_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/vendor.rb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
@@ -257,6 +250,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/google.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" />
       </list>
     </option>
   </component>
@@ -1236,12 +1230,6 @@
       <option name="number" value="Default" />
       <updated>1433449972498</updated>
     </task>
-    <task id="LOCAL-00001" summary="adding vendor data model">
-      <created>1433707900577</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1433707900577</updated>
-    </task>
     <task id="LOCAL-00002" summary="removing ratyrate&#10;">
       <created>1433764772389</created>
       <option name="number" value="00002" />
@@ -1530,7 +1518,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435501250680</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="trying lazy loading">
+      <created>1435511123151</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1435511123155</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1600,7 +1594,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="displaying vendor categories and sub-categories and linking them to vendor pages" />
     <MESSAGE value="correcting home url in navigation widget partial view" />
     <MESSAGE value="adding gem for full text search; adding search on vendors, categories and sub-categories; and adding search result page" />
     <MESSAGE value="modifying vendor show view to display all info for the vendor" />
@@ -1625,7 +1618,8 @@
     <MESSAGE value="putting in validations for vendor fields and adding custom messages" />
     <MESSAGE value="adding asterix to mandatory fields" />
     <MESSAGE value="adding link to header title" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding link to header title" />
+    <MESSAGE value="trying lazy loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying lazy loading" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1870,14 +1864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/vendors/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/search_results/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1906,14 +1892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.846153">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -2042,11 +2020,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3411371">
+        <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/vendors/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15614237">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
