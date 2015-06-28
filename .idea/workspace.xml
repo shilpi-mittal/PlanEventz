@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22562c4a-12af-41f3-8ded-0e19c4ed92a2" name="Default" comment="fixing view for newly added business">
+    <list default="true" id="22562c4a-12af-41f3-8ded-0e19c4ed92a2" name="Default" comment="fixing search functionality - removing sub category results">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/glogo.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/google.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/google.js" />
@@ -49,10 +49,10 @@
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000019" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Anshul\RubymineProjects\planEventz\solr\development\data\tlog\tlog.0000000000000000020" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solr/development/data/index/segments.gen" afterPath="$PROJECT_DIR$/solr/development/data/index/segments.gen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" afterPath="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_theme.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_theme.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/facebook.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/facebook.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/search_results_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/search_results_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/user_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/user_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/vendor_reviews_and_ratings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/vendor_reviews_and_ratings_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -87,21 +87,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_display_vendors.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_display_vendors.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15614237">
+            <state vertical-scroll-proportion="-5.230769">
               <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="google_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/google_controller.rb">
+      <file leaf-file-name="search_results_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/search_results_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.64437014">
+              <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -200,7 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/navigation.css" />
         <option value="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/vendor_reviews_and_ratings/_show_review.html.erb" />
         <option value="$PROJECT_DIR$/app/views/blog/show.html.erb" />
@@ -251,6 +250,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/search_results_controller.rb" />
       </list>
     </option>
   </component>
@@ -1230,12 +1230,6 @@
       <option name="number" value="Default" />
       <updated>1433449972498</updated>
     </task>
-    <task id="LOCAL-00002" summary="removing ratyrate&#10;">
-      <created>1433764772389</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1433764772389</updated>
-    </task>
     <task id="LOCAL-00003" summary="removing ratyrate completely&#10;">
       <created>1433765606672</created>
       <option name="number" value="00003" />
@@ -1524,7 +1518,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435511123155</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="displaying result count">
+      <created>1435511313870</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1435511313870</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1594,7 +1594,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="correcting home url in navigation widget partial view" />
     <MESSAGE value="adding gem for full text search; adding search on vendors, categories and sub-categories; and adding search result page" />
     <MESSAGE value="modifying vendor show view to display all info for the vendor" />
     <MESSAGE value="adding dummy pages for webpages under construction" />
@@ -1619,7 +1618,8 @@
     <MESSAGE value="adding asterix to mandatory fields" />
     <MESSAGE value="adding link to header title" />
     <MESSAGE value="trying lazy loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying lazy loading" />
+    <MESSAGE value="displaying result count" />
+    <option name="LAST_COMMIT_MESSAGE" value="displaying result count" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1872,14 +1872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/search_results_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/rubystubs20/kernel.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2038,8 +2030,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vendors/_display_vendors.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15614237">
+        <state vertical-scroll-proportion="-5.230769">
           <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/search_results_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64437014">
+          <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
           <folding />
         </state>
       </provider>
