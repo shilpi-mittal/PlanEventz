@@ -1,0 +1,82 @@
+<div align="right" style="margin-left: 35%;">
+  <%= render 'home/widgets/menu' %>
+</div>
+
+<%= form_for [@vendor] do |f| %>
+    <div class="page-title">
+      <h1>Add Your Business</h1>
+    </div>
+
+    <div style="padding-left: 25%; padding-bottom: 3%;" class="details">
+      <% if @vendor.errors.any? %>
+          <div id="error_explanation">
+            <h2>
+              <%= pluralize(@vendor.errors.count, "error") %> prohibited
+              you from saving your details:
+            </h2>
+            <ul>
+              <% @vendor.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <p>
+        <%= f.label :Name %><br>
+        <%= f.text_field :name %>
+      </p>
+
+       <p>
+        <%= f.label :Location %><br>
+        <%= f.text_field :location %>
+      </p>
+
+      <p>
+        <%= f.label :Category %><br>
+        <%= f.select(:category_id) do %>
+            <% [['Accessories Providers', 1], ['Attires Providers', 2], ['Bakers', 3], ['Caterers', 4], ['Decorators', 5],
+                ['Rental ', 6], ['Event Managers', 7], ['Fun Eats', 8], ['Photographers', 9],['Printers', 10],
+                ['Accessories Providers', 11], ['Return Gifts Providers', 12], ['Transportation Providers', 13], ['Venue Providers', 14]].each do |c| -%>
+                <%= content_tag(:option, c.first, value: c.last) %>
+            <% end %>
+        <% end %>
+      </p>
+
+      <p>
+        <%= f.label :Address %><br>
+        <%= f.text_area :address, :cols => 70, :rows => 8 %>
+      </p>
+
+      <p>
+        <%= f.label :"Phone Number" %><br>
+        <%= f.text_field :phone %>
+      </p>
+
+      <p>
+        <%= f.label :Description %><br>
+        <%= f.text_area :description, :cols => 70, :rows => 8 %>
+      </p>
+
+      <p>
+        <%= f.label :"Website Or Email Id" %><br>
+        <%= f.text_field :website %>
+      </p>
+
+      <p>
+        <%= f.label :"Events Handled" %><br>
+        <%= f.text_field :events_handled %>
+      </p>
+
+      <p>
+        <%= f.label :"Cover Picture" %><br>
+        <%= f.file_field :cover_pic %>
+      </p>
+
+      <a href="<%= home_index_path %>">
+        <button type="button">Back</button>
+      </a>
+      <%= f.submit "Submit Details" %>
+<% end %>
+
+</div>
