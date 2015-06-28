@@ -31,12 +31,12 @@
       <% end %>
 
       <p>
-        <%= f.label :Name %><br>
+        <%= f.label :Name, class: 'required' %><br>
         <%= f.text_field :name %>
       </p>
 
        <p>
-        <%= f.label :Location %><br>
+        <%= f.label :Location, class: 'required' %><br>
          <%= f.select(:location) do %>
              <% [['Bangalore', "Bangalore"]].each do |c| -%>
                  <%= content_tag(:option, c.first, value: c.last) %>
@@ -45,7 +45,7 @@
       </p>
 
       <p>
-        <%= f.label :Category %><br>
+        <%= f.label :Category, class: 'required' %><br>
         <%= f.select(:category_id) do %>
             <% list = Hash.new %>
             <% categories = get_all_categories %>
@@ -64,7 +64,7 @@
       </p>
 
       <p>
-        <%= f.label :"Phone Number" %><br>
+        <%= f.label :"Phone Number", class: 'required' %><br>
         <%= f.number_field :phone, :class => 'number_field' %>
       </p>
 

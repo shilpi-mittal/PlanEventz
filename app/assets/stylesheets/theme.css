@@ -164,3 +164,8 @@ a:active {
     color: #93F;
     font-weight:bolder;
 }
+
+label.required:after {
+    content: " *";
+    color: red;
+}
