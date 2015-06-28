@@ -88,6 +88,11 @@
         <%= f.file_field :cover_pic %>
       </p>
 
+      <p>
+        <%= f.label :"Gallery Picture" %><br>
+        <%= f.file_field :gallery_pic, multiple:true %>
+      </p>
+
       <a href="<%= home_index_path %>">
         <button type="button">Back</button>
       </a>
