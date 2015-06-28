@@ -11,12 +11,20 @@
       <% if @vendor.errors.any? %>
           <div id="error_explanation">
             <h2>
-              <%= pluralize(@vendor.errors.count, "error") %> prohibited
+              <% count =0 %>
+              <% @vendor.errors.each do |attr, msg| %>
+                  <% if @vendor.errors[attr].first == msg %>
+                     <% count=count+1 %>
+                  <% end %>
+              <% end %>
+              <%= pluralize(count, "error") %> prohibited
               you from saving your details:
             </h2>
             <ul>
-              <% @vendor.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
+              <% @vendor.errors.each do |attr, msg| %>
+                  <% if @vendor.errors[attr].first == msg %>
+                  <li><%= "#{attr} #{msg}" %></li>
+                      <% end %>
               <% end %>
             </ul>
           </div>
@@ -29,15 +37,22 @@
 
        <p>
         <%= f.label :Location %><br>
-        <%= f.text_field :location %>
+         <%= f.select(:location) do %>
+             <% [['Bangalore', "Bangalore"]].each do |c| -%>
+                 <%= content_tag(:option, c.first, value: c.last) %>
+             <% end %>
+         <% end %>
       </p>
 
       <p>
         <%= f.label :Category %><br>
         <%= f.select(:category_id) do %>
-            <% [['Accessories Providers', 1], ['Attires Providers', 2], ['Bakers', 3], ['Caterers', 4], ['Decorators', 5],
-                ['Rental ', 6], ['Event Managers', 7], ['Fun Eats', 8], ['Photographers', 9],['Printers', 10],
-                ['Accessories Providers', 11], ['Return Gifts Providers', 12], ['Transportation Providers', 13], ['Venue Providers', 14]].each do |c| -%>
+            <% list = Hash.new %>
+            <% categories = get_all_categories %>
+            <% categories.each do |category| %>
+                <% list[category["category"]]=category["id"] %>
+            <% end %>
+            <% list.each do |c| -%>
                 <%= content_tag(:option, c.first, value: c.last) %>
             <% end %>
         <% end %>
@@ -50,7 +65,7 @@
 
       <p>
         <%= f.label :"Phone Number" %><br>
-        <%= f.text_field :phone %>
+        <%= f.number_field :phone, :class => 'number_field' %>
       </p>
 
       <p>
@@ -65,7 +80,7 @@
 
       <p>
         <%= f.label :"Events Handled" %><br>
-        <%= f.text_field :events_handled %>
+        <%= f.number_field :events_handled, :class => 'number_field' %>
       </p>
 
       <p>
