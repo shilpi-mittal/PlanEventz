@@ -31,8 +31,8 @@ class VendorsController < ApplicationController
           @vendor_photo.save
         end
       end
-
       redirect_to vendor_path(@vendor.id)
+      Notifier.new_vendor_welcome_mail(@vendor).deliver_now
     else
       render 'new'
     end

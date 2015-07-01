@@ -74,7 +74,6 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("vendor_details/redballoons.jpg");
 }
 
 .cover {
@@ -114,6 +113,11 @@ img {
 .details {
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5em;
+}
+
+.mail-details {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.2em;
 }
 
 .details-heading {

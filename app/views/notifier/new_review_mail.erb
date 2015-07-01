@@ -1,0 +1,6 @@
+<h3> Hi <%=@user_name%></h3>
+<p class="mail-details"> Thank you for reviewing and rating <%=@vendor.name%>.<br/>
+  Your review has been successfully added. <br/>
+  Review : <%=@review.review%> <br/>
+  Rating : <%=@review.rating%> <br/>
+  Please <a href="<%= 'http://planeventz.cloudapp.net' + vendor_path(@vendor)%>">click here</a> to view the review added by you</p>
