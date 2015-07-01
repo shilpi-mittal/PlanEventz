@@ -1,6 +1,7 @@
 class Vendor < ActiveRecord::Base
   belongs_to :VendorCategory
   belongs_to :VendorSubCategory
+  belongs_to :User
   has_many :VendorReviewsAndRating
 
   searchable do

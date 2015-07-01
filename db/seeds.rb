@@ -23,16 +23,16 @@ end
 User.create(firstname: 'anonymous')
 
 blob = picToBlob("app/assets/images/cover_pic.jpg")
-Vendor.create(vendor_sub_category_id:1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: 'vendor_phone', description: 'vendor_des', website: 'vendor_web', events_handled: 5, category_id: 1, cover_pic: blob)
-Vendor.create(vendor_sub_category_id:2, name: 'vendor_name2', location: 'vendor_location2', address: 'vendor_address2', phone: 'vendor_phone2', description: 'vendor_des2', website: 'vendor_web2', events_handled: 10, category_id: 1, cover_pic: blob)
-Vendor.create(vendor_sub_category_id:1, name: 'vendor_name3', location: 'vendor_location3', address: 'vendor_address3', phone: 'vendor_phone3', description: 'vendor_des3', website: 'vendor_web3', events_handled: 4, category_id: 2)
-Vendor.create(vendor_sub_category_id:2, name: 'vendor_name4', location: 'vendor_location4', address: 'vendor_address4', phone: 'vendor_phone4', description: 'vendor_des4', website: 'vendor_web4', events_handled: 20, category_id: 2)
+Vendor.create(vendor_sub_category_id: 1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: '1234567890', description: 'vendor_des', website: 'vendor_web', events_handled: 5, category_id: 1, cover_pic: blob)
+Vendor.create(vendor_sub_category_id: 2, name: 'vendor_name2', location: 'vendor_location2', address: 'vendor_address2', phone: '1234567890', description: 'vendor_des2', website: 'vendor_web2', events_handled: 10, category_id: 1, cover_pic: blob)
+Vendor.create(vendor_sub_category_id: 1, name: 'vendor_name3', location: 'vendor_location3', address: 'vendor_address3', phone: '1234567890', description: 'vendor_des3', website: 'vendor_web3', events_handled: 4, category_id: 2)
+Vendor.create(vendor_sub_category_id: 2, name: 'vendor_name4', location: 'vendor_location4', address: 'vendor_address4', phone: '1234567890', description: 'vendor_des4', website: 'vendor_web4', events_handled: 20, category_id: 2)
 
-VendorReviewsAndRating.create(review:"Review 1", rating: 4, vendor_id: 1, user_id: 1)
-VendorReviewsAndRating.create(review:"Review 2", rating: 1, vendor_id: 1, user_id: 1)
+VendorReviewsAndRating.create(review: "Review 1", rating: 4, vendor_id: 1, user_id: 1)
+VendorReviewsAndRating.create(review: "Review 2", rating: 1, vendor_id: 1, user_id: 1)
 
-VendorReviewsAndRating.create(review:"Review 3", rating: 1, vendor_id: 2, user_id: 1)
-VendorReviewsAndRating.create(review:"Review 4", rating: 1, vendor_id: 2, user_id: 1)
+VendorReviewsAndRating.create(review: "Review 3", rating: 1, vendor_id: 2, user_id: 1)
+VendorReviewsAndRating.create(review: "Review 4", rating: 1, vendor_id: 2, user_id: 1)
 
 PageHit.create(url:"/vendors/1", count:0)
 

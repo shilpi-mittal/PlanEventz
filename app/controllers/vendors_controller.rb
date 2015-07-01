@@ -16,6 +16,7 @@ class VendorsController < ApplicationController
 
   def create
     @vendor = Vendor.new(vendor_params)
+    @vendor.user_id=1
       uploaded_io = params[:vendor][:cover_pic]
       if uploaded_io!=nil
         @vendor.cover_pic = SQLite3::Blob.new uploaded_io.read
@@ -31,6 +32,9 @@ class VendorsController < ApplicationController
           @vendor_photo.save
         end
       end
+      @user = User.find(@vendor.user_id)
+      @user.is_vendor_flag = true
+      @user.save
       redirect_to vendor_path(@vendor.id)
       Notifier.new_vendor_welcome_mail(@vendor).deliver_now
     else

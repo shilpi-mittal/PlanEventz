@@ -105,3 +105,6 @@ def destroy
 
     redirect_to articles_path
   end
+
+//for email notification
+rails generate mailer Notifier

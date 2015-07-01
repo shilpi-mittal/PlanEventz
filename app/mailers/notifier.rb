@@ -27,8 +27,7 @@ class Notifier < ApplicationMailer
 
   def new_vendor_welcome_mail(vendor)
     @vendor = vendor
-    # user = User.find(@vendor.user_id)
-    user = User.find(1)
+    user = User.find(@vendor.user_id)
     @user_name = user['firstname']
     user_email_id = user['email']
     mail(to: user_email_id,
