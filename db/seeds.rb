@@ -20,7 +20,7 @@ def picToBlob(image_file)
   blob = SQLite3::Blob.new img
 end
 
-User.create(firstname: 'anonymous')
+User.create(first_name: 'anonymous')
 
 blob = picToBlob("app/assets/images/cover_pic.jpg")
 Vendor.create(vendor_sub_category_id: 1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: '1234567890', description: 'vendor_des', website: 'vendor_web', events_handled: 5, category_id: 1, cover_pic: blob)

@@ -11,7 +11,8 @@ class VendorReviewsAndRatingsController < ApplicationController
     @vendor = Vendor.find(params[:vendor_id])
     @vendor_reviews_and_rating = VendorReviewsAndRating.new(review_and_rating_params)
     @vendor_reviews_and_rating.vendor_id=params[:vendor_id]
-    @vendor_reviews_and_rating.user_id=1
+    @current_user = current_user
+    @vendor_reviews_and_rating.user_id=@current_user.id
 
     if @vendor_reviews_and_rating.save
       redirect_to Vendor.find(params[:vendor_id])

@@ -14,7 +14,7 @@ class Notifier < ApplicationMailer
   def new_review_mail(review)
     @review = review
     user = User.find(review.user_id)
-    @user_name = user['firstname']
+    @user_name = user['first_name']
     user_email_id = user['email']
     @vendor = Vendor.find(@review.vendor_id)
     # @baseUrl = request.original_url
@@ -28,7 +28,7 @@ class Notifier < ApplicationMailer
   def new_vendor_welcome_mail(vendor)
     @vendor = vendor
     user = User.find(@vendor.user_id)
-    @user_name = user['firstname']
+    @user_name = user['first_name']
     user_email_id = user['email']
     mail(to: user_email_id,
          bcc: "shilpi@izumionline.in", subject: "Your business " + @vendor.name+" is added") do |format|

@@ -16,7 +16,8 @@ class VendorsController < ApplicationController
 
   def create
     @vendor = Vendor.new(vendor_params)
-    @vendor.user_id=1
+    @current_user = current_user
+    @vendor.user_id=@current_user.id
       uploaded_io = params[:vendor][:cover_pic]
       if uploaded_io!=nil
         @vendor.cover_pic = SQLite3::Blob.new uploaded_io.read

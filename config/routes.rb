@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  match 'auth/:provider/callback', to: 'sessions#create', via: ['get', 'post']
+  match 'auth/failure', to: redirect('/'), via: ['get', 'post']
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: ['get', 'post']
+
   post '/rate' => 'rater#create', :as => 'rate'
 
   get 'home/index'
@@ -13,7 +17,6 @@ Rails.application.routes.draw do
   resource :search_results
 
   resource :online_stores
-  resource :party_packages
   resource :register_yourselves
   resource :contact_us
   resource :about_us
