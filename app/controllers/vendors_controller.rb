@@ -1,22 +1,24 @@
 class VendorsController < ApplicationController
   def show
-    @vendor = Vendor.find(params[:id])
+    @vendor = Vendor.where('id=? and is_verified=?', params[:id], true)[0]
     @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", params[:id])
   end
 
   def index
-    @vendor = Vendor.all
+    @vendor = Vendor.where('is_verified=?', true)
     @vendor_photo = VendorPhoto.all
     @page_hit = PageHit.find_by_url(request.original_url)
   end
 
   def new
     @vendor = Vendor.new
+    @vendor.is_verified = false
   end
 
   def create
     @vendor = Vendor.new(vendor_params)
-    @current_user = current_user
+    @vendor.is_verified = false
+    @current_user = current_user()
     @vendor.user_id=@current_user.id
       uploaded_io = params[:vendor][:cover_pic]
       if uploaded_io!=nil
@@ -34,9 +36,9 @@ class VendorsController < ApplicationController
         end
       end
       @user = User.find(@vendor.user_id)
-      @user.is_vendor_flag = true
+      @user.is_vendor = true
       @user.save
-      redirect_to vendor_path(@vendor.id)
+      redirect_to new_register_yourselves_path
       Notifier.new_vendor_welcome_mail(@vendor).deliver_now
     else
       render 'new'
