@@ -8,7 +8,7 @@
     </div>
 
     <div align='center' id='login_required' class='details' style='color: red'>
-      <% if !current_user() %>
+      <% if !current_user %>
           Please Login to Submit your details
       <% end %>
     </div>
@@ -103,7 +103,7 @@
         <button type="button">Back</button>
       </a>
       <%= f.submit "Submit Details", 'data-disable-with' => "Please wait..", data: { confirm: "Are you sure?" }, 
-      'disabled' => !current_user() %>
+      'disabled' => !current_user %>
 <% end %>
 
 </div>
