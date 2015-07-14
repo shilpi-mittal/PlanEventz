@@ -1,0 +1,112 @@
+<div align="right" style="margin-left: 35%;">
+  <%= render 'home/widgets/menu' %>
+</div>
+
+<%= form_for [@vendor] do |f| %>
+    <div class="page-title">
+      <h1>Edit Your Business</h1>
+    </div>
+
+    <div style="padding-left: 25%; padding-bottom: 3%;" class="details">
+      <% if @vendor.errors.any? %>
+          <div id="error_explanation">
+            <h2>
+              <% count =0 %>
+              <% @vendor.errors.each do |attr, msg| %>
+                  <% if @vendor.errors[attr].first == msg %>
+                     <% count=count+1 %>
+                  <% end %>
+              <% end %>
+              <%= pluralize(count, "error") %> prohibited
+              you from saving your details:
+            </h2>
+            <ul>
+              <% @vendor.errors.each do |attr, msg| %>
+                  <% if @vendor.errors[attr].first == msg %>
+                  <li><%= "#{attr} #{msg}" %></li>
+                      <% end %>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <p>
+        <%= f.label :Name, class: 'required' %><br>
+        <%= f.text_field :name %>
+      </p>
+
+       <p>
+        <%= f.label :Location, class: 'required' %><br>
+         <%= f.select(:location) do %>
+             <% [['Bangalore', "Bangalore"]].each do |c| -%>
+                 <%= content_tag(:option, c.first, value: c.last) %>
+             <% end %>
+         <% end %>
+      </p>
+
+      <p>
+        <%= f.label :Category, class: 'required' %><br>
+        <%= f.select(:category_id) do %>
+            <% list = Hash.new %>
+            <% categories = get_all_categories %>
+            <% categories.each do |category| %>
+                <% list[category["category"]]=category["id"] %>
+            <% end %>
+            <% list.each do |c| -%>
+                <%= content_tag(:option, c.first, value: c.last) %>
+            <% end %>
+        <% end %>
+      </p>
+
+      <p>
+        <%= f.label :Address %><br>
+        <%= f.text_area :address, :cols => 70, :rows => 8 %>
+      </p>
+
+      <p>
+        <%= f.label :"Phone Number", class: 'required' %><br>
+        <%= f.number_field :phone, :class => 'number_field' %>
+      </p>
+
+      <p>
+        <%= f.label :Description %><br>
+        <%= f.text_area :description, :cols => 70, :rows => 8 %>
+      </p>
+
+      <p>
+        <%= f.label :"Website Or Email Id" %><br>
+        <%= f.text_field :website %>
+      </p>
+
+      <p>
+        <%= f.label :"Events Handled" %><br>
+        <%= f.number_field :events_handled, :class => 'number_field' %>
+      </p>
+
+      <p>
+        <%= f.label :"Cover Picture" %><br>
+        <%= f.file_field :cover_pic %>
+      </p>
+
+      <p>
+        <%= f.label :"Gallery Picture" %><br>
+        <%= f.file_field :gallery_pic, multiple:true %>
+      </p>
+
+      <p>
+        <%= label_tag(:is_verified, "Verified") %>
+        <%= check_box_tag(:is_verified) %>
+      </p>
+
+      <p>
+        <%= f.label :"Verifier Name" %><br>
+        <%= f.text_field :verifier_name %>
+      </p>
+
+      <a href="<%= home_index_path %>">
+        <button type="button">Back</button>
+      </a>
+      <%= f.submit "Submit Details", 'data-disable-with' => "Please wait..", data: { confirm: "Are you sure?" } %>
+<% end %>
+
+</div>

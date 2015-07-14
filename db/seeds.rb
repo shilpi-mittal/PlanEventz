@@ -23,10 +23,10 @@ end
 User.create(first_name: 'anonymous', name: 'anonymous', email: 'mail.izumi@gmail.com')
 
 blob = picToBlob("app/assets/images/cover_pic.jpg")
-Vendor.create(vendor_sub_category_id: 1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: '1234567890', description: 'vendor_des', website: 'vendor_web', events_handled: 5, category_id: 1, cover_pic: blob, is_verified: 0, verifier_name: '')
-Vendor.create(vendor_sub_category_id: 2, name: 'vendor_name2', location: 'vendor_location2', address: 'vendor_address2', phone: '1234567890', description: 'vendor_des2', website: 'vendor_web2', events_handled: 10, category_id: 1, cover_pic: blob, is_verified: 1, verifier_name: 'abc')
-Vendor.create(vendor_sub_category_id: 1, name: 'vendor_name3', location: 'vendor_location3', address: 'vendor_address3', phone: '1234567890', description: 'vendor_des3', website: 'vendor_web3', events_handled: 4, category_id: 2, is_verified: 1, verifier_name: 'abc')
-Vendor.create(vendor_sub_category_id: 2, name: 'vendor_name4', location: 'vendor_location4', address: 'vendor_address4', phone: '1234567890', description: 'vendor_des4', website: 'vendor_web4', events_handled: 20, category_id: 2, is_verified: 1, verifier_name: 'abc')
+Vendor.create(vendor_sub_category_id: 1, name: 'vendor_name', location: 'vendor_location', address: 'vendor_address', phone: '1234567890', description: 'vendor_des', website: 'vendor_web', events_handled: 5, category_id: 1, cover_pic: blob, is_verified: false, verifier_name: '')
+Vendor.create(vendor_sub_category_id: 2, name: 'vendor_name2', location: 'vendor_location2', address: 'vendor_address2', phone: '1234567890', description: 'vendor_des2', website: 'vendor_web2', events_handled: 10, category_id: 1, cover_pic: blob, is_verified: true, verifier_name: 'abc')
+Vendor.create(vendor_sub_category_id: 1, name: 'vendor_name3', location: 'vendor_location3', address: 'vendor_address3', phone: '1234567890', description: 'vendor_des3', website: 'vendor_web3', events_handled: 4, category_id: 2, is_verified: true, verifier_name: 'abc')
+Vendor.create(vendor_sub_category_id: 2, name: 'vendor_name4', location: 'vendor_location4', address: 'vendor_address4', phone: '1234567890', description: 'vendor_des4', website: 'vendor_web4', events_handled: 20, category_id: 2, is_verified: true, verifier_name: 'abc')
 
 VendorReviewsAndRating.create(review: "Review 1", rating: 4, vendor_id: 1, user_id: 1)
 VendorReviewsAndRating.create(review: "Review 2", rating: 1, vendor_id: 1, user_id: 1)

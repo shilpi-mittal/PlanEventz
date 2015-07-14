@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701201754) do
+ActiveRecord::Schema.define(version: 20150715183812) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -53,13 +53,18 @@ ActiveRecord::Schema.define(version: 20150701201754) do
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
 
   create_table "users", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
-    t.string   "password"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.boolean  "is_vendor_flag"
+    t.string   "profile_picture"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.boolean  "is_vendor"
   end
 
   create_table "vendor_categories", force: :cascade do |t|
@@ -114,6 +119,8 @@ ActiveRecord::Schema.define(version: 20150701201754) do
     t.integer  "category_id"
     t.binary   "cover_pic"
     t.integer  "user_id"
+    t.boolean  "is_verified"
+    t.string   "verifier_name"
   end
 
   add_index "vendors", ["category_id"], name: "index_vendors_on_category_id"
