@@ -17,7 +17,9 @@ class Vendor < ActiveRecord::Base
   validates :events_handled, numericality: { only_integer: true },
             allow_blank: true
 
+
    before_save :default_values
+
   def default_values
     self.is_verified ||= 0
   end

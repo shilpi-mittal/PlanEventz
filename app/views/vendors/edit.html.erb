@@ -94,8 +94,11 @@
       </p>
 
       <p>
-        <%= label_tag(:is_verified, "Verified") %>
-        <%= check_box_tag(:is_verified) %>
+        <%= label_tag(:is_verified, "Verified") %> <br>
+         <%= f.check_box :is_verified, {}, "true", "false" %>
+        <!-- <= f.check_box :is_verified, :value => @vendor.is_verified > -->
+        <!-- # <= f.label :is_verified, "Verified",:class => "checkbox inline"  %> -->
+        <!-- # <= f.input :is_verified, :as => :boolean %> -->
       </p>
 
       <p>

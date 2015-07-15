@@ -1,4 +1,6 @@
 class VendorsController < ApplicationController
+  http_basic_authenticate_with name: "verifier", password: "izumi@verify", only: :edit
+
   def show
     @vendor = Vendor.where('id=? and is_verified=?', params[:id], true)[0]
     @vendor_reviews_and_rating = VendorReviewsAndRating.where("vendor_id=?", params[:id])
@@ -13,6 +15,10 @@ class VendorsController < ApplicationController
   def new
     @vendor = Vendor.new
     @vendor.is_verified = false
+  end
+
+  def edit
+    @vendor = Vendor.find(params[:id])
   end
 
   def create
@@ -45,9 +51,20 @@ class VendorsController < ApplicationController
     end
   end
 
+  def update
+  @vendor = Vendor.find(params[:id])
+ 
+  if @vendor.update(vendor_params)
+    redirect_to vendors_path
+  else
+    render 'edit'
+  end
+end
+
   private
   def vendor_params
-    params.require(:vendor).permit(:name, :location, :category_id, :phone)
+    params.require(:vendor).permit(:name, :location, :category_id, :phone, :address, :phone, :description, 
+      :website, :vendor_sub_category_id, :events_handled, :cover_pic, :user_id, :is_verified, :verifier_name)
   end
 end
 
