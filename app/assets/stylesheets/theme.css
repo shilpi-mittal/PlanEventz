@@ -10,7 +10,7 @@
 }
 
 .header-logo-img {
-    max-height: 80px;
+    max-height: 60%;
     width: auto;
 }
 
@@ -129,7 +129,7 @@ img {
 .details-show {
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5em;
-    padding: 20px;
+    padding: 4%;
 }
 
 .contact-mail {
@@ -140,17 +140,16 @@ img {
 }
 
 .page {
-    width:100%;
-    min-height:900px;
+    width:100%
 }
 
 .menuleftcontent{
-    min-width:14%;
+    min-width:20%;
     float:left;
 }
 
 .maincontent{
-    min-width:83%;
+    min-width:77%;
     float:left;
 }
 

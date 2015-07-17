@@ -19,7 +19,7 @@ class Notifier < ApplicationMailer
     @vendor = Vendor.find(@review.vendor_id)
     # @baseUrl = request.original_url
     mail(to: user_email_id,
-         bcc: "shilpi@izumionline.in", subject: "Your review is added") do |format|
+         bcc: ["shilpi@izumionline.in", "bijesh@izumionline.in", "george@izumionline.in"], subject: "Your review is added") do |format|
       format.text
       format.html
     end
@@ -31,7 +31,7 @@ class Notifier < ApplicationMailer
     @user_name = user['first_name']
     user_email_id = user['email']
     mail(to: user_email_id,
-         bcc: "shilpi@izumionline.in", subject: "Your business " + @vendor.name+" is added") do |format|
+         bcc: ["shilpi@izumionline.in", "bijesh@izumionline.in", "george@izumionline.in"], subject: "Your business " + @vendor.name+" is added") do |format|
       format.text
       format.html
     end

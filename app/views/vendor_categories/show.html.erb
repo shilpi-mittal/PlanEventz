@@ -9,13 +9,14 @@
 
 <h1 class="page-title"> <%=@vendor_category.category%> </h1>
 
-
-<div class="bg-green">
+<div align="center">
+<div class="bg-green" align="left">
   <%= render 'home/widgets/left_panel_categories' %>
 </div>
 
 <div class="maincontent" align="center" id="vendors_div">
     <%= render 'vendors/display_vendors', :@vendor => @vendor %>
+</div>
 </div>
 
 <p align="center"> Number of Hits : <%= @page_hit.count %></p>
