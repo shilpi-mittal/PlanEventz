@@ -57,6 +57,13 @@ rake sunspot:reindex
 ruby bin/rails server
 
 
+//for creating backup
+cd into project/db
+type- sqlite3 <enter>
+type- .open <db name> <enter>
+type- .backup main db_backup.bak //to backup
+type- .restore main db_backup.bak //to restore
+
 
 Basics:
 //for ruby on rails console:
